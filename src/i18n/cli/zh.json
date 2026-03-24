@@ -1,0 +1,19 @@
+{
+  "usage": "psl - 协议规格语言工具\n\n用法:\n  psl <命令> [选项] [参数]\n\n命令:\n  list                     列出所有可用协议\n  show <协议名>            显示协议字段结构\n  decode <协议名>          从标准输入读取二进制数据，输出 JSON\n  encode <协议名> <json>   将 JSON 编码为二进制，输出到标准输出\n  validate <文件.psl>      验证 PSL 文件语法\n  pcap <文件.pcap>         解码 pcap/pcapng 抓包文件\n  generate <语言> <协议>   从协议定义生成代码\n  diagram <协议>           生成 RFC 风格协议图表\n  doc <协议>               生成协议文档\n  lsp                      启动 PSL 语言服务器\n\nGenerate 选项:\n  --all             为所有协议生成\n  -o <目录>          输出目录（默认: 当前目录）\n  --pkg <名称>      包名（默认: proto）\n  --template <文件> 使用自定义模板\n\nDiagram 选项:\n  --format <格式>   输出格式: ascii（默认）、svg\n  -o <文件>         写入文件\n\nDoc 选项:\n  --all             为所有协议生成\n  --format <格式>   输出格式: md（默认）、html\n  -o <目录>         输出目录\n\nPcap 选项:\n  -p <协议名>       按协议名过滤\n  --filter <表达式>  按字段值过滤（如 \"srcPort==80\"）\n  --format <格式>   输出格式: summary（默认）、json、table\n\n选项:\n  -l <文件.psl>   执行前加载额外的 PSL 文件\n  -f <文件>       从文件读取输入（替代标准输入/参数）\n  -o <文件>       将输出写入文件（替代标准输出）\n  --raw           显示原始 PSL 源码（用于 show 命令）\n  --lang <en|zh>  设置输出语言（默认: en）\n  -h, --help      显示帮助信息\n",
+  "list.empty": "没有可用的协议",
+  "list.header": "可用协议 (%d):",
+  "list.col.name": "协议",
+  "list.col.rfc": "RFC",
+  "list.col.desc": "描述",
+  "validate.ok": "%s: 验证通过 ✓",
+  "encode.no_input": "请提供 JSON 参数或使用 -f <文件>",
+  "encode.invalid_json": "无效的 JSON: %v",
+  "show.col.name": "字段名",
+  "show.col.type": "类型",
+  "show.col.bits": "位宽",
+  "show.col.desc": "说明",
+  "show.variable": "变长",
+  "show.remaining": "剩余",
+  "show.msg.kind": "类型",
+  "show.msg.name": "消息"
+}

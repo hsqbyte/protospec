@@ -1,0 +1,22 @@
+protocol WebSocket version "1.0" {
+  byte_order big-endian;
+
+  bitfield {
+    field fin: uint1;
+    field rsv1: uint1;
+    field rsv2: uint1;
+    field rsv3: uint1;
+    field opcode: uint4;
+  }
+  bitfield {
+    field mask: uint1;
+    field payloadLen: uint7;
+  }
+  field extPayloadLen16: uint16
+    when payloadLen == 126;
+  field extPayloadLen64: uint64
+    when payloadLen == 127;
+  field maskingKey: uint32
+    when mask == 1;
+  field payload: bytes;
+}

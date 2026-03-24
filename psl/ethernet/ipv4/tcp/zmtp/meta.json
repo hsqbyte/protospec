@@ -1,0 +1,14 @@
+{
+  "title": {
+    "en": "ZeroMQ Message Transport Protocol",
+    "zh": "ZeroMQ 消息传输协议"
+  },
+  "description": {
+    "en": "ZMTP framing protocol for ZeroMQ messaging",
+    "zh": "ZMTP 帧协议，用于 ZeroMQ 消息传输"
+  },
+  "status": "standard",
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["TCP"]
+}

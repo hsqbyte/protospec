@@ -1,0 +1,55 @@
+{
+  "rfc": "8200",
+  "url": "https://datatracker.ietf.org/doc/html/rfc8200",
+  "title": {
+    "en": "Internet Protocol Version 6",
+    "zh": "互联网协议第六版"
+  },
+  "description": {
+    "en": "The successor to IPv4 with 128-bit addresses, simplified header, and built-in support for extension headers. Designed to address IPv4 address exhaustion.",
+    "zh": "IPv4的继任者，采用128位地址、简化头部，内置扩展头支持。旨在解决IPv4地址耗尽问题。"
+  },
+  "status": "standard",
+  "see_also": ["RFC 2460"],
+  "type": "binary",
+  "layer": "network",
+  "depends_on": ["Ethernet"],
+  "fields": {
+    "version": {
+      "en": "IP version, always 6 for IPv6",
+      "zh": "IP版本号，IPv6固定为6"
+    },
+    "trafficClass": {
+      "en": "Traffic class for QoS (DSCP + ECN)",
+      "zh": "流量类别，用于QoS (DSCP + ECN)"
+    },
+    "flowLabel": {
+      "en": "Flow label for identifying packet flows",
+      "zh": "流标签，用于标识数据包流"
+    },
+    "payloadLength": {
+      "en": "Length of payload in bytes (excluding header)",
+      "zh": "载荷长度（字节），不含头部"
+    },
+    "nextHeader": {
+      "en": "Next header type (6=TCP, 17=UDP, 58=ICMPv6)",
+      "zh": "下一个头部类型 (6=TCP, 17=UDP, 58=ICMPv6)"
+    },
+    "hopLimit": {
+      "en": "Hop limit, decremented by each router",
+      "zh": "跳数限制，每经过一个路由器减1"
+    },
+    "srcAddr": {
+      "en": "Source IPv6 address (128-bit)",
+      "zh": "源IPv6地址 (128位)"
+    },
+    "dstAddr": {
+      "en": "Destination IPv6 address (128-bit)",
+      "zh": "目标IPv6地址 (128位)"
+    },
+    "payload": {
+      "en": "Upper layer protocol data or extension headers",
+      "zh": "上层协议数据或扩展头"
+    }
+  }
+}

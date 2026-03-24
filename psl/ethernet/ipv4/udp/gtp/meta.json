@@ -1,0 +1,17 @@
+{
+  "rfc": "",
+  "url": "https://www.3gpp.org/specifications",
+  "title": { "en": "GPRS Tunnelling Protocol", "zh": "GPRS 隧道协议" },
+  "description": { "en": "GTP-U user plane tunnelling for mobile networks", "zh": "移动网络 GTP-U 用户面隧道协议" },
+  "status": "standard",
+  "type": "binary",
+  "layer": "transport",
+  "depends_on": ["UDP"],
+  "fields": {
+    "version": { "en": "GTP version", "zh": "GTP 版本" },
+    "pt": { "en": "Protocol type (1=GTP)", "zh": "协议类型（1=GTP）" },
+    "message_type": { "en": "Message type", "zh": "消息类型" },
+    "length": { "en": "Payload length", "zh": "载荷长度" },
+    "teid": { "en": "Tunnel Endpoint Identifier", "zh": "隧道端点标识符" }
+  }
+}

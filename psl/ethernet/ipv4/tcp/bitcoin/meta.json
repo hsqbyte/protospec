@@ -1,0 +1,13 @@
+{
+  "rfc": "",
+  "url": "https://developer.bitcoin.org/reference/p2p_networking.html",
+  "title": { "en": "Bitcoin P2P Protocol", "zh": "比特币 P2P 协议" },
+  "description": { "en": "Bitcoin peer-to-peer network message protocol", "zh": "比特币点对点网络消息协议" },
+  "status": "standard", "type": "binary", "layer": "application", "depends_on": ["TCP"],
+  "fields": {
+    "magic": { "en": "Network magic bytes", "zh": "网络魔数" },
+    "command": { "en": "Command name (null-padded)", "zh": "命令名（空字节填充）" },
+    "length": { "en": "Payload length", "zh": "载荷长度" },
+    "checksum": { "en": "First 4 bytes of SHA256d(payload)", "zh": "SHA256d(payload) 前4字节" }
+  }
+}

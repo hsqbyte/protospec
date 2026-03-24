@@ -1,0 +1,21 @@
+protocol Modbus_TCP version "1.0" {
+    byte_order big-endian;
+
+    field transaction_id: uint16;
+    field protocol_id: uint16;
+    field length: uint16;
+    field unit_id: uint8;
+
+    field function_code: uint8 enum {
+        1 = "Read Coils",
+        2 = "Read Discrete Inputs",
+        3 = "Read Holding Registers",
+        4 = "Read Input Registers",
+        5 = "Write Single Coil",
+        6 = "Write Single Register",
+        15 = "Write Multiple Coils",
+        16 = "Write Multiple Registers"
+    };
+
+    field data: bytes;
+}

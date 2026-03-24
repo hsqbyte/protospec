@@ -1,0 +1,23 @@
+protocol GTP version "1.0" {
+    byte_order big-endian;
+
+    bitfield {
+        field version: uint3;
+        field pt: uint1;
+        field reserved: uint1;
+        field e: uint1;
+        field s: uint1;
+        field pn: uint1;
+    }
+
+    field message_type: uint8 enum {
+        1 = "Echo Request",
+        2 = "Echo Response",
+        16 = "Create PDP Context Request",
+        17 = "Create PDP Context Response",
+        255 = "G-PDU"
+    };
+    field length: uint16;
+    field teid: uint32;
+    field payload: bytes;
+}

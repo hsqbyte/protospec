@@ -1,0 +1,14 @@
+protocol CAN version "2.0" {
+    byte_order big-endian;
+
+    bitfield {
+        field identifier: uint11;
+        field rtr: uint1 enum { 0 = "Data", 1 = "Remote" };
+        field ide: uint1 enum { 0 = "Standard", 1 = "Extended" };
+        field reserved: uint1;
+        field dlc: uint4;
+    }
+
+    field data: bytes[8];
+    field crc: uint16;
+}

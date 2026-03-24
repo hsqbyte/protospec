@@ -1,0 +1,21 @@
+// Bluetooth HCI — Transport definition for message protocols
+// Defines command/event/data message types for upper-layer BLE protocols
+
+message BT_HCI version "5.4" {
+
+  command {
+    field opcode: number;
+    field parameters: object optional;
+  }
+
+  event {
+    field eventCode: number;
+    field parameters: object optional;
+  }
+
+  data {
+    field handle: number;
+    field flags: number;
+    field payload: object optional;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "title": { "en": "LoRaWAN MAC Frame", "zh": "LoRaWAN MAC 帧" },
+  "description": { "en": "LoRaWAN LPWAN MAC layer frame for IoT", "zh": "LoRaWAN LPWAN MAC 层帧，用于物联网" },
+  "status": "standard",
+  "type": "binary",
+  "layer": "data-link",
+  "depends_on": []
+}

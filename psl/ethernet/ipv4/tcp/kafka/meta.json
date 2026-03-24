@@ -1,0 +1,13 @@
+{
+  "rfc": "",
+  "url": "https://kafka.apache.org/protocol",
+  "title": { "en": "Apache Kafka Wire Protocol", "zh": "Apache Kafka 线协议" },
+  "description": { "en": "Kafka binary wire protocol for client-broker communication", "zh": "Kafka 客户端-Broker 二进制通信协议" },
+  "status": "standard", "type": "binary", "layer": "application", "depends_on": ["TCP"],
+  "fields": {
+    "length": { "en": "Message length", "zh": "消息长度" },
+    "api_key": { "en": "API key (request type)", "zh": "API 键（请求类型）" },
+    "api_version": { "en": "API version", "zh": "API 版本" },
+    "correlation_id": { "en": "Correlation ID", "zh": "关联 ID" }
+  }
+}

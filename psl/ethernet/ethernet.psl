@@ -1,0 +1,13 @@
+protocol Ethernet version "1.0" {
+  byte_order big-endian;
+
+  bitfield {
+    field dstMAC: uint48;
+  }
+  bitfield {
+    field srcMAC: uint48;
+  }
+  field etherType: uint16
+    enum { 0x0800 = "IPv4", 0x0806 = "ARP", 0x86DD = "IPv6", 0x8100 = "VLAN" };
+  field payload: bytes;
+}

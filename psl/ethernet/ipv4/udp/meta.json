@@ -1,0 +1,39 @@
+{
+  "rfc": "768",
+  "url": "https://datatracker.ietf.org/doc/html/rfc768",
+  "title": {
+    "en": "User Datagram Protocol",
+    "zh": "用户数据报协议"
+  },
+  "description": {
+    "en": "Lightweight, connectionless transport with no delivery guarantee. Used by DNS, DHCP, video streaming, online gaming and other latency-sensitive applications.",
+    "zh": "轻量级、无连接的传输协议，不保证可靠交付。DNS、DHCP、视频流、在线游戏等对延迟敏感的应用使用UDP。"
+  },
+  "status": "standard",
+  "see_also": [],
+  "type": "binary",
+  "layer": "transport",
+  "depends_on": ["IPv4", "IPv6"],
+  "fields": {
+    "srcPort": {
+      "en": "Source port number, 0 if not used",
+      "zh": "源端口号，不使用时为0"
+    },
+    "dstPort": {
+      "en": "Destination port number",
+      "zh": "目标端口号"
+    },
+    "length": {
+      "en": "Total length in bytes, including header (min 8)",
+      "zh": "总长度（字节），包含头部 (最小8)"
+    },
+    "checksum": {
+      "en": "Checksum of header and data, optional in IPv4",
+      "zh": "头部和数据的校验和，在IPv4中可选"
+    },
+    "payload": {
+      "en": "Application layer data",
+      "zh": "应用层数据"
+    }
+  }
+}

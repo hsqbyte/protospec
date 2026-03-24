@@ -1,0 +1,22 @@
+protocol DNS version "1.0" {
+  byte_order big-endian;
+
+  field id: uint16;
+  bitfield {
+    field qr: uint1;
+    field opcode: uint4;
+    field aa: uint1;
+    field tc: uint1;
+    field rd: uint1;
+  }
+  bitfield {
+    field ra: uint1;
+    field z: uint3;
+    field rcode: uint4;
+  }
+  field qdcount: uint16;
+  field ancount: uint16;
+  field nscount: uint16;
+  field arcount: uint16;
+  field payload: bytes;
+}

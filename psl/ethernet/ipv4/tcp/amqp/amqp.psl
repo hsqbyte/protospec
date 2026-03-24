@@ -1,0 +1,11 @@
+protocol AMQP version "0.9.1" {
+    byte_order big-endian;
+
+    field frame_type: uint8 enum {
+        1 = "Method", 2 = "Header", 3 = "Body", 8 = "Heartbeat"
+    };
+    field channel: uint16;
+    field size: uint32;
+    field payload: bytes;
+    field frame_end: uint8;
+}

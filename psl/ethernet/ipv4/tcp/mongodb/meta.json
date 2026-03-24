@@ -1,0 +1,14 @@
+{
+  "title": {
+    "en": "MongoDB Wire Protocol",
+    "zh": "MongoDB 线协议"
+  },
+  "description": {
+    "en": "MongoDB wire protocol for client-server communication",
+    "zh": "MongoDB 线协议，用于客户端-服务器通信"
+  },
+  "status": "standard",
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["TCP"]
+}

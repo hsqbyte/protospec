@@ -1,0 +1,14 @@
+{
+  "title": {
+    "en": "PostgreSQL Wire Protocol",
+    "zh": "PostgreSQL 线协议"
+  },
+  "description": {
+    "en": "PostgreSQL frontend/backend wire protocol v3",
+    "zh": "PostgreSQL 前端/后端线协议 v3"
+  },
+  "status": "standard",
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["TCP"]
+}

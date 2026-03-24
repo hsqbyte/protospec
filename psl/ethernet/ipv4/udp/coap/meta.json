@@ -1,0 +1,24 @@
+{
+  "rfc": "RFC 7252",
+  "url": "https://datatracker.ietf.org/doc/html/rfc7252",
+  "title": {
+    "en": "Constrained Application Protocol",
+    "zh": "受限应用协议"
+  },
+  "description": {
+    "en": "Lightweight protocol for constrained IoT devices",
+    "zh": "面向受限 IoT 设备的轻量级协议"
+  },
+  "status": "standard",
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["UDP"],
+  "fields": {
+    "ver": { "en": "Version (1)", "zh": "版本号（1）" },
+    "type": { "en": "Message type", "zh": "消息类型" },
+    "token_length": { "en": "Token length (0-8)", "zh": "Token 长度（0-8）" },
+    "code": { "en": "Method or response code", "zh": "方法或响应码" },
+    "message_id": { "en": "Message ID for deduplication", "zh": "消息 ID（去重用）" },
+    "token": { "en": "Token for request/response matching", "zh": "请求/响应匹配 Token" }
+  }
+}

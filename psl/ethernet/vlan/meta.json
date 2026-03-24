@@ -1,0 +1,39 @@
+{
+  "rfc": "",
+  "url": "https://standards.ieee.org/ieee/802.1Q/10323/",
+  "title": {
+    "en": "IEEE 802.1Q VLAN Tag",
+    "zh": "IEEE 802.1Q VLAN标签"
+  },
+  "description": {
+    "en": "Virtual LAN tagging inserted into Ethernet frames. Adds a 4-byte tag between source MAC and EtherType to separate broadcast domains on a single physical network.",
+    "zh": "插入以太网帧中的虚拟局域网标签。在源MAC和EtherType之间添加4字节标签，在单一物理网络上隔离广播域。"
+  },
+  "status": "standard",
+  "see_also": ["IEEE 802.1Q"],
+  "type": "binary",
+  "layer": "link",
+  "depends_on": ["Ethernet"],
+  "fields": {
+    "pcp": {
+      "en": "Priority Code Point, 3-bit QoS priority (0-7)",
+      "zh": "优先级代码点，3位QoS优先级 (0-7)"
+    },
+    "dei": {
+      "en": "Drop Eligible Indicator (formerly CFI)",
+      "zh": "丢弃资格指示位 (原CFI位)"
+    },
+    "vid": {
+      "en": "VLAN Identifier (0-4094, 0=no VLAN, 4095=reserved)",
+      "zh": "VLAN标识符 (0-4094, 0=无VLAN, 4095=保留)"
+    },
+    "etherType": {
+      "en": "Encapsulated protocol type",
+      "zh": "封装的协议类型"
+    },
+    "payload": {
+      "en": "Encapsulated frame data",
+      "zh": "封装的帧数据"
+    }
+  }
+}

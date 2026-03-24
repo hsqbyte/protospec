@@ -1,0 +1,13 @@
+protocol Bitcoin version "1.0" {
+    byte_order little-endian;
+
+    field magic: uint32 enum {
+        0xD9B4BEF9 = "mainnet",
+        0xDAB5BFFA = "regtest",
+        0x0709110B = "testnet3"
+    };
+    field command: bytes[12];
+    field length: uint32;
+    field checksum: uint32;
+    field payload: bytes;
+}

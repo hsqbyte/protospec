@@ -1,0 +1,13 @@
+protocol ModbusASCII version "1.0" {
+    byte_order big-endian;
+
+    field start: uint8;
+    field address: uint8;
+    field function_code: uint8 enum {
+        1 = "ReadCoils", 2 = "ReadDiscreteInputs",
+        3 = "ReadHoldingRegisters", 4 = "ReadInputRegisters",
+        5 = "WriteSingleCoil", 6 = "WriteSingleRegister",
+        15 = "WriteMultipleCoils", 16 = "WriteMultipleRegisters"
+    };
+    field payload: bytes;
+}

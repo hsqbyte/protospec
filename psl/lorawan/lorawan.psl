@@ -1,0 +1,20 @@
+protocol LoRaWAN version "1.0" {
+    byte_order little-endian;
+
+    bitfield {
+        field mtype: uint3;
+        field rfu: uint3;
+        field major: uint2;
+    }
+
+    field dev_addr: uint32;
+    bitfield {
+        field fctrl_adr: uint1;
+        field fctrl_adrackreq: uint1;
+        field fctrl_ack: uint1;
+        field fctrl_classb: uint1;
+        field fctrl_foptslen: uint4;
+    }
+    field fcnt: uint16;
+    field payload: bytes;
+}

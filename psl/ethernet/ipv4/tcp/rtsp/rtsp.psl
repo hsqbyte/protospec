@@ -1,0 +1,40 @@
+message RTSP version "1.0" {
+    transport rest;
+
+    request DESCRIBE {
+        field method: string;
+        field uri: string;
+        field cseq: number;
+        field accept: string optional;
+    }
+
+    request SETUP {
+        field method: string;
+        field uri: string;
+        field cseq: number;
+        field transport: string;
+    }
+
+    request PLAY {
+        field method: string;
+        field uri: string;
+        field cseq: number;
+        field session: string;
+        field play_range: string optional;
+    }
+
+    request TEARDOWN {
+        field method: string;
+        field uri: string;
+        field cseq: number;
+        field session: string;
+    }
+
+    response RTSPResponse {
+        field status_code: number;
+        field reason: string;
+        field cseq: number;
+        field session: string optional;
+        field transport: string optional;
+    }
+}

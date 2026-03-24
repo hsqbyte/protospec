@@ -1,0 +1,13 @@
+protocol WebRTCDataChannel version "1.0" {
+    byte_order big-endian;
+
+    field message_type: uint8 enum {
+        3 = "DATA_CHANNEL_OPEN", 2 = "DATA_CHANNEL_ACK"
+    };
+    field channel_type: uint8;
+    field priority: uint16;
+    field reliability: uint32;
+    field label_length: uint16;
+    field protocol_length: uint16;
+    field payload: bytes;
+}

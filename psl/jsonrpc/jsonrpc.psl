@@ -1,0 +1,29 @@
+// JSON-RPC 2.0 — JSON Remote Procedure Call Protocol
+// Specification: https://www.jsonrpc.org/specification
+
+message JSON_RPC version "2.0" {
+
+  request {
+    field jsonrpc: string default "2.0";
+    field method: string;
+    field params: object optional;
+    field id: number default auto;
+
+    response {
+      field jsonrpc: string default "2.0";
+      field result: object optional;
+      field error: object {
+        field code: number;
+        field message: string;
+        field data: object optional;
+      } optional;
+      field id: number default auto;
+    }
+  }
+
+  notification {
+    field jsonrpc: string default "2.0";
+    field method: string;
+    field params: object optional;
+  }
+}

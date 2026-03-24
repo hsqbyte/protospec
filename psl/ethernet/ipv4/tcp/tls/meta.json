@@ -1,0 +1,39 @@
+{
+  "rfc": "8446",
+  "url": "https://datatracker.ietf.org/doc/html/rfc8446",
+  "title": {
+    "en": "TLS Record Protocol",
+    "zh": "TLS记录协议"
+  },
+  "description": {
+    "en": "The record layer of Transport Layer Security. Fragments, compresses, encrypts and authenticates application data. Each record has a 5-byte header.",
+    "zh": "传输层安全的记录层。对应用数据进行分片、压缩、加密和认证。每条记录有5字节头部。"
+  },
+  "status": "standard",
+  "see_also": ["RFC 5246"],
+  "type": "binary",
+  "layer": "transport",
+  "depends_on": ["TCP"],
+  "fields": {
+    "contentType": {
+      "en": "Record content type (20=ChangeCipherSpec, 21=Alert, 22=Handshake, 23=ApplicationData)",
+      "zh": "记录内容类型 (20=密钥变更, 21=告警, 22=握手, 23=应用数据)"
+    },
+    "majorVersion": {
+      "en": "TLS major version (3 for TLS 1.x)",
+      "zh": "TLS主版本号 (TLS 1.x为3)"
+    },
+    "minorVersion": {
+      "en": "TLS minor version (1=TLS1.0, 2=TLS1.1, 3=TLS1.2, 4=TLS1.3)",
+      "zh": "TLS次版本号 (1=TLS1.0, 2=TLS1.1, 3=TLS1.2, 4=TLS1.3)"
+    },
+    "length": {
+      "en": "Length of payload in bytes (max 16384 + 2048)",
+      "zh": "载荷长度（字节），最大 16384 + 2048"
+    },
+    "payload": {
+      "en": "Encrypted or plaintext record data",
+      "zh": "加密或明文记录数据"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+protocol Redis_RESP version "3.0" {
+    byte_order big-endian;
+
+    field type_byte: uint8 enum {
+        43 = "Simple String (+)",
+        45 = "Error (-)",
+        58 = "Integer (:)",
+        36 = "Bulk String ($)",
+        42 = "Array (*)"
+    };
+    field data: bytes;
+}

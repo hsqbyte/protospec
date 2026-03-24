@@ -1,0 +1,21 @@
+protocol TCP version "1.0" {
+  byte_order big-endian;
+
+  field srcPort: uint16;
+  field dstPort: uint16;
+  field sequenceNumber: uint32;
+  field acknowledgmentNumber: uint32;
+  bitfield {
+    field dataOffset: uint4;
+    field reserved: uint3;
+    field flags: uint9;
+  }
+  field windowSize: uint16;
+  field checksum: uint16
+    checksum internet-checksum covers [srcPort..urgentPointer, options, payload];
+  field urgentPointer: uint16;
+  field options: bytes
+    length_ref dataOffset scale 4 offset -20
+    when dataOffset > 5;
+  field payload: bytes;
+}

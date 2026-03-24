@@ -1,0 +1,18 @@
+protocol ARP version "1.0" {
+  byte_order big-endian;
+
+  field hardwareType: uint16;
+  field protocolType: uint16;
+  field hardwareSize: uint8;
+  field protocolSize: uint8;
+  field opcode: uint16
+    enum { 1 = "request", 2 = "reply" };
+  field senderMAC: bytes
+    length_ref hardwareSize;
+  field senderIP: bytes
+    length_ref protocolSize;
+  field targetMAC: bytes
+    length_ref hardwareSize;
+  field targetIP: bytes
+    length_ref protocolSize;
+}

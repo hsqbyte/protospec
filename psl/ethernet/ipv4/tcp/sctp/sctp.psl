@@ -1,0 +1,9 @@
+protocol SCTP version "1.0" {
+    byte_order big-endian;
+
+    field source_port: uint16;
+    field dest_port: uint16;
+    field verification_tag: uint32;
+    field checksum: uint32;
+    field payload: bytes;
+}

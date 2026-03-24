@@ -1,0 +1,15 @@
+{
+  "title": {
+    "en": "H.264 NAL Unit Header",
+    "zh": "H.264 NAL 单元头"
+  },
+  "description": {
+    "en": "H.264/AVC Network Abstraction Layer unit header for video coding",
+    "zh": "H.264/AVC 网络抽象层单元头，用于视频编码"
+  },
+  "status": "standard",
+  "see_also": ["RTP"],
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["RTP"]
+}

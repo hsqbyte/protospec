@@ -1,0 +1,32 @@
+const { LanguageClient, TransportKind } = require("vscode-languageclient/node");
+
+let client;
+
+function activate(context) {
+  const serverOptions = {
+    command: "psl",
+    args: ["lsp"],
+    transport: TransportKind.stdio,
+  };
+
+  const clientOptions = {
+    documentSelector: [{ language: "psl" }],
+  };
+
+  client = new LanguageClient(
+    "protospecPSL",
+    "ProtoSpec PSL",
+    serverOptions,
+    clientOptions
+  );
+
+  client.start();
+}
+
+function deactivate() {
+  if (client) {
+    return client.stop();
+  }
+}
+
+module.exports = { activate, deactivate };

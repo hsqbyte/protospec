@@ -1,0 +1,17 @@
+protocol ZWave version "1.0" {
+    byte_order big-endian;
+
+    field home_id: uint32;
+    field source_node: uint8;
+    bitfield {
+        field header_type: uint4;
+        field speed: uint1;
+        field low_power: uint1;
+        field ack_req: uint1;
+        field routed: uint1;
+    }
+    field length: uint8;
+    field dest_node: uint8;
+    field command_class: uint8;
+    field payload: bytes;
+}

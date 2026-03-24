@@ -1,0 +1,28 @@
+protocol IPv4 version "1.0" {
+    byte_order big-endian;
+
+    bitfield {
+        field version: uint4;
+        field ihl: uint4;
+    }
+    field tos: uint8;
+    field totalLength: uint16;
+    field identification: uint16;
+    bitfield {
+        field flags: uint3;
+        field fragmentOffset: uint13;
+    }
+    field ttl: uint8;
+    field protocol: uint8
+    enum { 1 = "ICMP", 6 = "TCP", 17 = "UDP" };
+    field headerChecksum: uint16
+    checksum internet-checksum covers [version..protocol, srcAddr, dstAddr];
+    field srcAddr: uint32
+    display ipv4;
+    field dstAddr: uint32
+    display ipv4;
+    field options: bytes
+    length_ref ihl scale 4 offset -20
+    when ihl > 5;
+    field payload: bytes;
+}

@@ -1,0 +1,12 @@
+protocol VLAN version "1.0" {
+  byte_order big-endian;
+
+  bitfield {
+    field pcp: uint3;
+    field dei: uint1;
+    field vid: uint12;
+  }
+  field etherType: uint16
+    enum { 0x0800 = "IPv4", 0x0806 = "ARP", 0x86DD = "IPv6" };
+  field payload: bytes;
+}

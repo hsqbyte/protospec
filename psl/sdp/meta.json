@@ -1,0 +1,17 @@
+{
+  "rfc": "RFC 4566",
+  "url": "https://tools.ietf.org/html/rfc4566",
+  "title": {
+    "en": "Session Description Protocol",
+    "zh": "会话描述协议"
+  },
+  "description": {
+    "en": "SDP describes multimedia session parameters for session announcement and invitation",
+    "zh": "SDP 描述多媒体会话参数，用于会话通告和邀请"
+  },
+  "status": "standard",
+  "see_also": ["SIP", "RTP"],
+  "type": "message",
+  "layer": "application",
+  "depends_on": []
+}

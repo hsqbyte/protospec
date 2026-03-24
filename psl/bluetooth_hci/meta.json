@@ -1,0 +1,16 @@
+{
+  "rfc": "",
+  "url": "https://www.bluetooth.com/specifications/specs/core-specification/",
+  "title": { "en": "Bluetooth HCI", "zh": "蓝牙 HCI" },
+  "description": { "en": "Bluetooth Host Controller Interface", "zh": "蓝牙主机控制器接口" },
+  "status": "standard",
+  "type": "binary",
+  "layer": "link",
+  "depends_on": [],
+  "fields": {
+    "packet_indicator": { "en": "HCI packet type", "zh": "HCI 包类型" },
+    "opcode": { "en": "Command opcode", "zh": "命令操作码" },
+    "parameter_length": { "en": "Parameter total length", "zh": "参数总长度" },
+    "parameters": { "en": "Command parameters", "zh": "命令参数" }
+  }
+}

@@ -1,0 +1,12 @@
+protocol Matter version "1.0" {
+    byte_order little-endian;
+
+    bitfield {
+        field version: uint4;
+        field flags: uint4;
+    }
+    field session_id: uint16;
+    field security_flags: uint8;
+    field message_counter: uint32;
+    field payload: bytes;
+}

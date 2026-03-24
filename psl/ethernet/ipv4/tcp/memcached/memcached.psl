@@ -1,0 +1,21 @@
+protocol Memcached version "1.0" {
+    byte_order big-endian;
+
+    field magic: uint8 enum {
+        128 = "Request", 129 = "Response"
+    };
+    field opcode: uint8 enum {
+        0 = "Get", 1 = "Set", 2 = "Add",
+        3 = "Replace", 4 = "Delete", 5 = "Increment",
+        6 = "Decrement", 7 = "Quit", 8 = "Flush",
+        10 = "Noop", 12 = "Version", 14 = "Append"
+    };
+    field key_length: uint16;
+    field extras_length: uint8;
+    field data_type: uint8;
+    field status: uint16;
+    field total_body_length: uint32;
+    field opaque: uint32;
+    field cas: uint64;
+    field payload: bytes;
+}

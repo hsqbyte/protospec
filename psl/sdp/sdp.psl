@@ -1,0 +1,23 @@
+message SDP version "1.0" {
+    transport rest;
+
+    request SDPOffer {
+        field version: string;
+        field origin: string;
+        field session_name: string;
+        field connection: string;
+        field timing: string;
+        field media: string;
+        field attributes: string optional;
+    }
+
+    response SDPAnswer {
+        field version: string;
+        field origin: string;
+        field session_name: string;
+        field connection: string;
+        field timing: string;
+        field media: string;
+        field attributes: string optional;
+    }
+}

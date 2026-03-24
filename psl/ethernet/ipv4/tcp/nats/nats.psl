@@ -1,0 +1,32 @@
+message NATS version "1.0" {
+    transport rest;
+
+    request CONNECT {
+        field verbose: boolean;
+        field pedantic: boolean;
+        field tls_required: boolean;
+        field name: string optional;
+        field lang: string;
+        field version: string;
+        field protocol: number;
+    }
+
+    request PUB {
+        field subject: string;
+        field reply_to: string optional;
+        field payload: string;
+    }
+
+    request SUB {
+        field subject: string;
+        field queue_group: string optional;
+        field sid: string;
+    }
+
+    notification MSG {
+        field subject: string;
+        field sid: string;
+        field reply_to: string optional;
+        field payload: string;
+    }
+}

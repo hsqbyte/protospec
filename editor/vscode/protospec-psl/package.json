@@ -1,0 +1,38 @@
+{
+  "name": "protospec-psl",
+  "displayName": "ProtoSpec PSL",
+  "description": "Syntax highlighting for ProtoSpec Language (.psl) files",
+  "version": "0.1.0",
+  "publisher": "protospec",
+  "main": "./extension.js",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "activationEvents": ["onLanguage:psl"],
+  "categories": ["Programming Languages"],
+  "icon": "icons/psl.svg",
+  "contributes": {
+    "languages": [
+      {
+        "id": "psl",
+        "aliases": ["PSL", "ProtoSpec Language"],
+        "extensions": [".psl"],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/psl.svg",
+          "dark": "./icons/psl.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "psl",
+        "scopeName": "source.psl",
+        "path": "./syntaxes/psl.tmLanguage.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.0"
+  }
+}

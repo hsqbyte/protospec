@@ -1,0 +1,28 @@
+protocol CoAP version "1.0" {
+    byte_order big-endian;
+
+    bitfield {
+        field ver: uint2;
+        field type: uint2 enum {
+            0 = "Confirmable",
+            1 = "Non-confirmable",
+            2 = "Acknowledgement",
+            3 = "Reset"
+        };
+        field token_length: uint4;
+    }
+
+    field code: uint8 enum {
+        1 = "GET",
+        2 = "POST",
+        3 = "PUT",
+        4 = "DELETE",
+        65 = "2.01 Created",
+        69 = "2.05 Content",
+        128 = "4.00 Bad Request",
+        132 = "4.04 Not Found"
+    };
+
+    field message_id: uint16;
+    field token: bytes;
+}

@@ -1,0 +1,24 @@
+{
+  "rfc": "",
+  "url": "https://www.iso.org/standard/63648.html",
+  "title": {
+    "en": "Controller Area Network",
+    "zh": "控制器局域网"
+  },
+  "description": {
+    "en": "Vehicle bus standard for automotive and industrial communication",
+    "zh": "汽车和工业通信的车辆总线标准"
+  },
+  "status": "standard",
+  "type": "binary",
+  "layer": "link",
+  "depends_on": [],
+  "fields": {
+    "identifier": { "en": "Message identifier (11-bit)", "zh": "消息标识符（11位）" },
+    "rtr": { "en": "Remote transmission request", "zh": "远程传输请求" },
+    "ide": { "en": "Identifier extension", "zh": "标识符扩展" },
+    "dlc": { "en": "Data length code (0-8)", "zh": "数据长度码（0-8）" },
+    "data": { "en": "Data field (up to 8 bytes)", "zh": "数据字段（最多8字节）" },
+    "crc": { "en": "CRC-15 checksum", "zh": "CRC-15 校验和" }
+  }
+}

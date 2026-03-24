@@ -1,0 +1,23 @@
+{
+  "rfc": "9110",
+  "url": "https://datatracker.ietf.org/doc/html/rfc9110",
+  "title": {
+    "en": "Hypertext Transfer Protocol",
+    "zh": "超文本传输协议"
+  },
+  "description": {
+    "en": "The application layer protocol powering the World Wide Web. A text-based request/response protocol for transferring HTML, APIs, files and other resources.",
+    "zh": "驱动万维网的应用层协议。基于文本的请求/响应协议，用于传输HTML、API、文件等资源。"
+  },
+  "status": "standard",
+  "see_also": ["RFC 9112"],
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["TCP"],
+  "fields": {
+    "payload": {
+      "en": "Raw HTTP message (text-based, not suited for bit-level parsing)",
+      "zh": "原始HTTP报文 (文本协议，不适合位级解析)"
+    }
+  }
+}

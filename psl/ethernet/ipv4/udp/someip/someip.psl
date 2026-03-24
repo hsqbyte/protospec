@@ -1,0 +1,27 @@
+protocol SOME_IP version "1.0" {
+    byte_order big-endian;
+
+    field message_id: uint32;
+    field length: uint32;
+    field request_id: uint32;
+
+    bitfield {
+        field protocol_version: uint8;
+        field interface_version: uint8;
+        field message_type: uint8 enum {
+            0 = "REQUEST",
+            1 = "REQUEST_NO_RETURN",
+            2 = "NOTIFICATION",
+            128 = "RESPONSE",
+            129 = "ERROR"
+        };
+        field return_code: uint8 enum {
+            0 = "E_OK",
+            1 = "E_NOT_OK",
+            2 = "E_UNKNOWN_SERVICE",
+            3 = "E_UNKNOWN_METHOD"
+        };
+    }
+
+    field payload: bytes;
+}

@@ -1,0 +1,8 @@
+{
+  "title": { "en": "Zigbee Frame", "zh": "Zigbee 帧" },
+  "description": { "en": "IEEE 802.15.4 / Zigbee MAC frame header", "zh": "IEEE 802.15.4 / Zigbee MAC 帧头" },
+  "status": "standard",
+  "type": "binary",
+  "layer": "data-link",
+  "depends_on": []
+}

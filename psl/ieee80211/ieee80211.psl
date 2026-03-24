@@ -1,0 +1,33 @@
+protocol IEEE80211 version "1.0" {
+    byte_order little-endian;
+
+    bitfield {
+        field protocol_version: uint2;
+        field type: uint2 enum {
+            0 = "Management",
+            1 = "Control",
+            2 = "Data"
+        };
+        field subtype: uint4;
+        field to_ds: uint1;
+        field from_ds: uint1;
+        field more_fragments: uint1;
+        field retry: uint1;
+        field power_management: uint1;
+        field more_data: uint1;
+        field protected_frame: uint1;
+        field order: uint1;
+    }
+
+    field duration_id: uint16;
+    field address1: bytes[6];
+    field address2: bytes[6];
+    field address3: bytes[6];
+
+    bitfield {
+        field fragment_number: uint4;
+        field sequence_number: uint12;
+    }
+
+    field payload: bytes;
+}

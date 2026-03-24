@@ -1,0 +1,101 @@
+// MCP — Model Context Protocol
+// Specification: https://spec.modelcontextprotocol.io
+
+message MCP version "2024-11-05" {
+  transport jsonrpc;
+
+  request {
+    method "initialize";
+    params {
+      field protocolVersion: string;
+      field capabilities: object {
+        field roots: object optional;
+        field sampling: object optional;
+      };
+      field clientInfo: object {
+        field name: string;
+        field version: string;
+      };
+    }
+    response {
+      result {
+        field protocolVersion: string;
+        field capabilities: object {
+          field tools: object optional;
+          field resources: object optional;
+          field prompts: object optional;
+          field logging: object optional;
+        };
+        field serverInfo: object {
+          field name: string;
+          field version: string;
+        };
+      }
+    }
+  }
+
+  notification {
+    method "notifications/initialized";
+  }
+
+  request {
+    method "tools/list";
+    params {
+      field cursor: string optional;
+    }
+    response {
+      result {
+        field tools: array;
+        field nextCursor: string optional;
+      }
+    }
+  }
+
+  request {
+    method "tools/call";
+    params {
+      field name: string;
+      field arguments: object optional;
+    }
+    response {
+      result {
+        field content: array;
+        field isError: boolean optional;
+      }
+    }
+  }
+
+  request {
+    method "resources/list";
+    params {
+      field cursor: string optional;
+    }
+    response {
+      result {
+        field resources: array;
+        field nextCursor: string optional;
+      }
+    }
+  }
+
+  request {
+    method "resources/read";
+    params {
+      field uri: string;
+    }
+    response {
+      result {
+        field contents: array;
+      }
+    }
+  }
+
+  notification {
+    method "notifications/progress";
+    params {
+      field progressToken: string;
+      field progress: number;
+      field total: number optional;
+    }
+  }
+}

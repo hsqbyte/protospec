@@ -1,0 +1,12 @@
+protocol PostgreSQL version "3.0" {
+    byte_order big-endian;
+
+    field message_type: uint8 enum {
+        81 = "Query", 84 = "RowDescription", 68 = "DataRow",
+        67 = "CommandComplete", 90 = "ReadyForQuery",
+        82 = "Authentication", 75 = "BackendKeyData",
+        69 = "ErrorResponse", 88 = "Terminate"
+    };
+    field length: uint32;
+    field payload: bytes;
+}

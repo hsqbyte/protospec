@@ -1,0 +1,67 @@
+{
+  "rfc": "793",
+  "url": "https://datatracker.ietf.org/doc/html/rfc793",
+  "title": {
+    "en": "Transmission Control Protocol",
+    "zh": "传输控制协议"
+  },
+  "description": {
+    "en": "Reliable, ordered, connection-oriented byte stream transport. Used by HTTP, SSH, FTP, SMTP and most application protocols that require guaranteed delivery.",
+    "zh": "可靠、有序、面向连接的字节流传输协议。HTTP、SSH、FTP、SMTP等大多数需要可靠传输的应用协议都基于TCP。"
+  },
+  "status": "obsoleted",
+  "see_also": ["RFC 9293"],
+  "type": "binary",
+  "layer": "transport",
+  "depends_on": ["IPv4", "IPv6"],
+  "fields": {
+    "srcPort": {
+      "en": "Source port number (0-65535)",
+      "zh": "源端口号 (0-65535)"
+    },
+    "dstPort": {
+      "en": "Destination port number (0-65535)",
+      "zh": "目标端口号 (0-65535)"
+    },
+    "sequenceNumber": {
+      "en": "Sequence number of the first data byte in this segment",
+      "zh": "本段数据第一个字节的序列号"
+    },
+    "acknowledgmentNumber": {
+      "en": "Next sequence number the sender expects to receive",
+      "zh": "发送方期望接收的下一个序列号"
+    },
+    "dataOffset": {
+      "en": "Header length in 32-bit words (min 5, max 15)",
+      "zh": "头部长度，单位32位字 (最小5, 最大15)"
+    },
+    "reserved": {
+      "en": "Reserved, must be zero",
+      "zh": "保留位，必须为0"
+    },
+    "flags": {
+      "en": "Control flags: URG, ACK, PSH, RST, SYN, FIN etc.",
+      "zh": "控制标志位: URG, ACK, PSH, RST, SYN, FIN 等"
+    },
+    "windowSize": {
+      "en": "Receive window size in bytes, for flow control",
+      "zh": "接收窗口大小（字节），用于流量控制"
+    },
+    "checksum": {
+      "en": "Header and data checksum for error detection",
+      "zh": "头部和数据的校验和，用于错误检测"
+    },
+    "urgentPointer": {
+      "en": "Offset of urgent data end, valid only when URG flag is set",
+      "zh": "紧急数据结束偏移，仅URG标志置位时有效"
+    },
+    "options": {
+      "en": "Variable-length options (MSS, window scale, timestamps, etc.)",
+      "zh": "可变长度选项 (MSS, 窗口缩放, 时间戳等)"
+    },
+    "payload": {
+      "en": "Application layer data",
+      "zh": "应用层数据"
+    }
+  }
+}

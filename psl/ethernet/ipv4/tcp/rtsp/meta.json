@@ -1,0 +1,17 @@
+{
+  "rfc": "RFC 7826",
+  "url": "https://tools.ietf.org/html/rfc7826",
+  "title": {
+    "en": "Real Time Streaming Protocol",
+    "zh": "实时流传输协议"
+  },
+  "description": {
+    "en": "RTSP controls delivery of streaming media servers",
+    "zh": "RTSP 控制流媒体服务器的媒体传输"
+  },
+  "status": "standard",
+  "see_also": ["RTP", "SDP"],
+  "type": "message",
+  "layer": "application",
+  "depends_on": ["TCP"]
+}

@@ -1,0 +1,75 @@
+{
+  "rfc": "791",
+  "url": "https://datatracker.ietf.org/doc/html/rfc791",
+  "title": {
+    "en": "Internet Protocol Version 4",
+    "zh": "互联网协议第四版"
+  },
+  "description": {
+    "en": "The fundamental network layer protocol of the Internet. Handles addressing, routing and fragmentation of packets between hosts across networks.",
+    "zh": "互联网的基础网络层协议。负责跨网络的主机间数据包寻址、路由和分片。"
+  },
+  "status": "standard",
+  "see_also": [],
+  "type": "binary",
+  "layer": "network",
+  "depends_on": ["Ethernet"],
+  "fields": {
+    "version": {
+      "en": "IP version, always 4 for IPv4",
+      "zh": "IP版本号，IPv4固定为4"
+    },
+    "ihl": {
+      "en": "Header length in 32-bit words (min 5, max 15)",
+      "zh": "头部长度，单位32位字 (最小5, 最大15)"
+    },
+    "tos": {
+      "en": "Type of Service, indicates priority and handling (now DSCP/ECN)",
+      "zh": "服务类型，指示优先级和处理方式 (现为DSCP/ECN)"
+    },
+    "totalLength": {
+      "en": "Total packet length in bytes, including header and data",
+      "zh": "整个数据包的总长度（字节），包含头部和数据"
+    },
+    "identification": {
+      "en": "Unique ID for reassembling fragmented packets",
+      "zh": "唯一标识符，用于重组分片数据包"
+    },
+    "flags": {
+      "en": "Fragmentation flags (bit0=reserved, bit1=DF, bit2=MF)",
+      "zh": "分片标志 (bit0=保留, bit1=DF禁止分片, bit2=MF更多分片)"
+    },
+    "fragmentOffset": {
+      "en": "Fragment position in original datagram, in 8-byte units",
+      "zh": "分片在原始数据报中的位置，单位8字节"
+    },
+    "ttl": {
+      "en": "Time to Live, decremented by each router, packet discarded at 0",
+      "zh": "生存时间，每经过一个路由器减1，为0时丢弃"
+    },
+    "protocol": {
+      "en": "Upper layer protocol number (1=ICMP, 6=TCP, 17=UDP)",
+      "zh": "上层协议号 (1=ICMP, 6=TCP, 17=UDP)"
+    },
+    "headerChecksum": {
+      "en": "Header-only checksum, recomputed at each hop",
+      "zh": "仅头部的校验和，每经过一跳重新计算"
+    },
+    "srcAddr": {
+      "en": "Source IP address (32-bit)",
+      "zh": "源IP地址 (32位)"
+    },
+    "dstAddr": {
+      "en": "Destination IP address (32-bit)",
+      "zh": "目标IP地址 (32位)"
+    },
+    "options": {
+      "en": "Variable-length options (record route, timestamp, etc.)",
+      "zh": "可变长度选项 (记录路由, 时间戳等)"
+    },
+    "payload": {
+      "en": "Upper layer protocol data (TCP, UDP, ICMP, etc.)",
+      "zh": "上层协议数据 (TCP, UDP, ICMP等)"
+    }
+  }
+}

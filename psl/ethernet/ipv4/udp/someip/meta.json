@@ -1,0 +1,26 @@
+{
+  "rfc": "",
+  "url": "https://www.autosar.org/standards/adaptive-platform",
+  "title": {
+    "en": "Scalable service-Oriented MiddlewarE over IP",
+    "zh": "基于 IP 的可扩展面向服务中间件"
+  },
+  "description": {
+    "en": "Automotive middleware protocol for service-oriented communication",
+    "zh": "汽车中间件协议，用于面向服务的通信"
+  },
+  "status": "standard",
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["TCP", "UDP"],
+  "fields": {
+    "message_id": { "en": "Service ID + Method ID", "zh": "服务 ID + 方法 ID" },
+    "length": { "en": "Length from request_id to end", "zh": "从 request_id 到末尾的长度" },
+    "request_id": { "en": "Client ID + Session ID", "zh": "客户端 ID + 会话 ID" },
+    "protocol_version": { "en": "Protocol version", "zh": "协议版本" },
+    "interface_version": { "en": "Interface version", "zh": "接口版本" },
+    "message_type": { "en": "Message type", "zh": "消息类型" },
+    "return_code": { "en": "Return code", "zh": "返回码" },
+    "payload": { "en": "Serialized payload", "zh": "序列化载荷" }
+  }
+}

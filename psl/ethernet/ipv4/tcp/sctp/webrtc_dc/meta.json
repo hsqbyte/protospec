@@ -1,0 +1,8 @@
+{
+  "title": { "en": "WebRTC DataChannel", "zh": "WebRTC 数据通道" },
+  "description": { "en": "WebRTC DataChannel establishment protocol", "zh": "WebRTC 数据通道建立协议" },
+  "status": "standard",
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["SCTP"]
+}

@@ -1,0 +1,19 @@
+{
+  "usage": "psl - Protocol Specification Language tool\n\nUsage:\n  psl <command> [options] [arguments]\n\nCommands:\n  list                     List all available protocols\n  show <protocol>          Show protocol field structure\n  decode <protocol>        Decode binary data from stdin to JSON\n  encode <protocol> <json> Encode JSON to binary, output to stdout\n  validate <file.psl>      Validate a PSL file\n  pcap <file.pcap>         Decode packets from pcap/pcapng file\n  generate <lang> <proto>  Generate code from protocol definition\n  diagram <protocol>       Generate RFC-style protocol diagram\n  doc <protocol>           Generate protocol documentation\n  lsp                      Start PSL language server\n\nGenerate Options:\n  --all             Generate for all protocols\n  -o <dir>          Output directory (default: current)\n  --pkg <name>      Package name (default: proto)\n  --template <file> Use custom template\n\nDiagram Options:\n  --format <fmt>    Output format: ascii (default), svg\n  -o <file>         Write to file\n\nDoc Options:\n  --all             Generate for all protocols\n  --format <fmt>    Output format: md (default), html\n  -o <dir>          Output directory\n\nPcap Options:\n  -p <protocol>     Filter by protocol name\n  --filter <expr>   Filter by field value (e.g. \"srcPort==80\")\n  --format <fmt>    Output format: summary (default), json, table\n\nOptions:\n  -l <file.psl>   Load additional PSL file before executing\n  -f <file>       Read input from file instead of stdin/argument\n  -o <file>       Write output to file instead of stdout\n  --raw           Show raw PSL source (for show command)\n  --lang <en|zh>  Set output language (default: en)\n  -h, --help      Show this help message\n",
+  "list.empty": "No protocols available",
+  "list.header": "Available protocols (%d):",
+  "list.col.name": "Protocol",
+  "list.col.rfc": "RFC",
+  "list.col.desc": "Description",
+  "validate.ok": "%s: valid ✓",
+  "encode.no_input": "provide JSON as argument or use -f <file>",
+  "encode.invalid_json": "invalid JSON: %v",
+  "show.col.name": "Field",
+  "show.col.type": "Type",
+  "show.col.bits": "Bits",
+  "show.col.desc": "Description",
+  "show.variable": "var",
+  "show.remaining": "rest",
+  "show.msg.kind": "Kind",
+  "show.msg.name": "Message"
+}

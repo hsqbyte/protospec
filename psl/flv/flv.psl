@@ -1,0 +1,12 @@
+protocol FLVTag version "1.0" {
+    byte_order big-endian;
+
+    field tag_type: uint8 enum {
+        8 = "Audio", 9 = "Video", 18 = "Script"
+    };
+    field data_size: uint24;
+    field timestamp: uint24;
+    field timestamp_ext: uint8;
+    field stream_id: uint24;
+    field payload: bytes;
+}

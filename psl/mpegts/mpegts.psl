@@ -1,0 +1,17 @@
+protocol MPEGTS version "1.0" {
+    byte_order big-endian;
+
+    field sync_byte: uint8;
+    bitfield {
+        field tei: uint1;
+        field pusi: uint1;
+        field priority: uint1;
+        field pid: uint13;
+    }
+    bitfield {
+        field tsc: uint2;
+        field afc: uint2;
+        field continuity_counter: uint4;
+    }
+    field payload: bytes;
+}

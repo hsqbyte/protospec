@@ -1,0 +1,9 @@
+{
+  "rfc": "RFC 8656",
+  "title": { "en": "TURN Protocol", "zh": "TURN 协议" },
+  "description": { "en": "Traversal Using Relays around NAT", "zh": "使用中继穿越 NAT" },
+  "status": "standard",
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["UDP"]
+}

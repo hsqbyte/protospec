@@ -1,0 +1,14 @@
+{
+  "title": {
+    "en": "MySQL Client/Server Protocol",
+    "zh": "MySQL 客户端/服务器协议"
+  },
+  "description": {
+    "en": "MySQL wire protocol packet header for client-server communication",
+    "zh": "MySQL 线协议包头，用于客户端-服务器通信"
+  },
+  "status": "standard",
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["TCP"]
+}

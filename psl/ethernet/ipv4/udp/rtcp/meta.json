@@ -1,0 +1,17 @@
+{
+  "rfc": "RFC 3550",
+  "url": "https://tools.ietf.org/html/rfc3550",
+  "title": {
+    "en": "RTP Control Protocol",
+    "zh": "RTP 控制协议"
+  },
+  "description": {
+    "en": "RTCP provides feedback on quality of service for RTP streams",
+    "zh": "RTCP 为 RTP 流提供服务质量反馈"
+  },
+  "status": "standard",
+  "see_also": ["RTP"],
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["UDP"]
+}

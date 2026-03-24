@@ -1,0 +1,14 @@
+{
+  "title": {
+    "en": "FLV Tag Header",
+    "zh": "FLV 标签头"
+  },
+  "description": {
+    "en": "Flash Video container format tag header",
+    "zh": "Flash Video 容器格式标签头"
+  },
+  "status": "standard",
+  "type": "binary",
+  "layer": "application",
+  "depends_on": []
+}

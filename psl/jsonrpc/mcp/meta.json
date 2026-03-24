@@ -1,0 +1,91 @@
+{
+  "rfc": "",
+  "url": "https://spec.modelcontextprotocol.io",
+  "title": {
+    "en": "Model Context Protocol",
+    "zh": "模型上下文协议"
+  },
+  "description": {
+    "en": "An open protocol for seamless integration between LLM applications and external data sources and tools",
+    "zh": "一种用于 LLM 应用与外部数据源和工具无缝集成的开放协议"
+  },
+  "status": "standard",
+  "see_also": ["JSON_RPC"],
+  "type": "message",
+  "layer": "application",
+  "depends_on": ["JSON_RPC"],
+  "fields": {
+    "protocolVersion": {
+      "en": "MCP protocol version string",
+      "zh": "MCP 协议版本字符串"
+    },
+    "capabilities": {
+      "en": "Client or server capability declarations",
+      "zh": "客户端或服务端能力声明"
+    },
+    "clientInfo": {
+      "en": "Client implementation information",
+      "zh": "客户端实现信息"
+    },
+    "serverInfo": {
+      "en": "Server implementation information",
+      "zh": "服务端实现信息"
+    },
+    "tools": {
+      "en": "Tool definitions or tool call results",
+      "zh": "工具定义或工具调用结果"
+    },
+    "resources": {
+      "en": "Resource definitions",
+      "zh": "资源定义"
+    },
+    "name": {
+      "en": "Name identifier",
+      "zh": "名称标识符"
+    },
+    "version": {
+      "en": "Version string",
+      "zh": "版本字符串"
+    },
+    "uri": {
+      "en": "Resource URI",
+      "zh": "资源 URI"
+    },
+    "contents": {
+      "en": "Resource contents",
+      "zh": "资源内容"
+    },
+    "content": {
+      "en": "Tool call result content",
+      "zh": "工具调用结果内容"
+    },
+    "arguments": {
+      "en": "Tool call arguments",
+      "zh": "工具调用参数"
+    },
+    "cursor": {
+      "en": "Pagination cursor",
+      "zh": "分页游标"
+    },
+    "nextCursor": {
+      "en": "Next page cursor",
+      "zh": "下一页游标"
+    },
+    "progressToken": {
+      "en": "Progress notification token",
+      "zh": "进度通知令牌"
+    },
+    "progress": {
+      "en": "Current progress value",
+      "zh": "当前进度值"
+    },
+    "total": {
+      "en": "Total progress value",
+      "zh": "总进度值"
+    },
+    "isError": {
+      "en": "Whether the tool call resulted in an error",
+      "zh": "工具调用是否出错"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "rfc": "1035",
+  "url": "https://datatracker.ietf.org/doc/html/rfc1035",
+  "title": {
+    "en": "Domain Name System",
+    "zh": "域名系统"
+  },
+  "description": {
+    "en": "Translates human-readable domain names (e.g. example.com) to IP addresses. The backbone of Internet name resolution, used by virtually every networked application.",
+    "zh": "将人类可读的域名（如 example.com）解析为IP地址。互联网域名解析的基础设施，几乎所有联网应用都依赖DNS。"
+  },
+  "status": "standard",
+  "see_also": ["RFC 1034"],
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["UDP", "TCP"],
+  "fields": {
+    "id": {
+      "en": "Transaction ID, used to match requests and responses",
+      "zh": "事务ID，用于匹配请求和响应"
+    },
+    "qr": {
+      "en": "Query/Response (0=query, 1=response)",
+      "zh": "查询/响应标志 (0=查询, 1=响应)"
+    },
+    "opcode": {
+      "en": "Operation code (0=standard query, 1=inverse query, 2=status)",
+      "zh": "操作码 (0=标准查询, 1=反向查询, 2=状态请求)"
+    },
+    "aa": {
+      "en": "Authoritative Answer, set if responding server is authoritative",
+      "zh": "权威应答，响应服务器是否为该域的权威服务器"
+    },
+    "tc": {
+      "en": "Truncated, set if message was truncated due to length",
+      "zh": "截断标志，消息因长度限制被截断时置1"
+    },
+    "rd": {
+      "en": "Recursion Desired, client requests recursive resolution",
+      "zh": "期望递归，客户端请求递归解析"
+    },
+    "ra": {
+      "en": "Recursion Available, server supports recursive queries",
+      "zh": "可用递归，服务器支持递归查询"
+    },
+    "z": {
+      "en": "Reserved, must be zero",
+      "zh": "保留位，必须为0"
+    },
+    "rcode": {
+      "en": "Response code (0=no error, 1=format error, 2=server fail, 3=name error)",
+      "zh": "响应码 (0=无错误, 1=格式错误, 2=服务器失败, 3=域名不存在)"
+    },
+    "qdcount": {
+      "en": "Number of entries in the question section",
+      "zh": "问题区域的条目数"
+    },
+    "ancount": {
+      "en": "Number of resource records in the answer section",
+      "zh": "回答区域的资源记录数"
+    },
+    "nscount": {
+      "en": "Number of authority resource records",
+      "zh": "授权区域的资源记录数"
+    },
+    "arcount": {
+      "en": "Number of additional resource records",
+      "zh": "附加区域的资源记录数"
+    },
+    "payload": {
+      "en": "Question and resource record sections",
+      "zh": "问题和资源记录区域"
+    }
+  }
+}

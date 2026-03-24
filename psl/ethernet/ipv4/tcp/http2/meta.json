@@ -1,0 +1,43 @@
+{
+  "rfc": "9113",
+  "url": "https://datatracker.ietf.org/doc/html/rfc9113",
+  "title": {
+    "en": "HTTP/2 Frame",
+    "zh": "HTTP/2帧"
+  },
+  "description": {
+    "en": "Binary framing layer for HTTP/2. Each frame has a 9-byte header with length, type, flags and stream identifier. Enables multiplexing, server push and header compression.",
+    "zh": "HTTP/2的二进制帧层。每帧有9字节头部，包含长度、类型、标志和流标识符。支持多路复用、服务器推送和头部压缩。"
+  },
+  "status": "standard",
+  "see_also": ["RFC 7540"],
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["TCP"],
+  "fields": {
+    "length": {
+      "en": "Payload length in bytes (24-bit, max 16MB)",
+      "zh": "载荷长度（字节），24位，最大16MB"
+    },
+    "type": {
+      "en": "Frame type (0=DATA, 1=HEADERS, 4=SETTINGS, etc.)",
+      "zh": "帧类型 (0=DATA, 1=HEADERS, 4=SETTINGS等)"
+    },
+    "flags": {
+      "en": "Frame-type-specific flags (e.g. END_STREAM=0x1, END_HEADERS=0x4)",
+      "zh": "帧类型相关标志 (如 END_STREAM=0x1, END_HEADERS=0x4)"
+    },
+    "reserved": {
+      "en": "Reserved bit, must be 0",
+      "zh": "保留位，必须为0"
+    },
+    "streamId": {
+      "en": "Stream identifier (0 for connection-level frames)",
+      "zh": "流标识符 (0表示连接级帧)"
+    },
+    "payload": {
+      "en": "Frame payload, interpretation depends on frame type",
+      "zh": "帧载荷，解释方式取决于帧类型"
+    }
+  }
+}

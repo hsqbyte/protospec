@@ -1,0 +1,7 @@
+// HTTP/1.1 is text-based and not well suited for bit-level PDL.
+// This is a minimal placeholder representing a raw HTTP message.
+protocol HTTP version "1.0" {
+  byte_order big-endian;
+
+  field payload: bytes;
+}

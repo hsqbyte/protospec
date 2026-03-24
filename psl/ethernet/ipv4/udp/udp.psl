@@ -1,0 +1,11 @@
+protocol UDP version "1.0" {
+  byte_order big-endian;
+
+  field srcPort: uint16;
+  field dstPort: uint16;
+  field length: uint16;
+  field checksum: uint16
+    checksum internet-checksum covers [srcPort, dstPort, length, checksum, payload];
+  field payload: bytes
+    length_ref length offset -8;
+}

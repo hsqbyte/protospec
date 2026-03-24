@@ -1,0 +1,10 @@
+protocol MQTT version "1.0" {
+  byte_order big-endian;
+
+  bitfield {
+    field packetType: uint4;
+    field flags: uint4;
+  }
+  field remainingLength: uint8;
+  field payload: bytes;
+}

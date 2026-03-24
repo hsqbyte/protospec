@@ -1,0 +1,15 @@
+protocol Kafka version "1.0" {
+    byte_order big-endian;
+
+    field length: uint32;
+    field api_key: uint16 enum {
+        0 = "Produce",
+        1 = "Fetch",
+        2 = "ListOffsets",
+        3 = "Metadata",
+        18 = "ApiVersions"
+    };
+    field api_version: uint16;
+    field correlation_id: uint32;
+    field payload: bytes;
+}

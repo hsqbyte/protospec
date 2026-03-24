@@ -1,0 +1,14 @@
+{
+  "title": {
+    "en": "MPEG Transport Stream Packet",
+    "zh": "MPEG 传输流包"
+  },
+  "description": {
+    "en": "MPEG-TS 188-byte transport stream packet header",
+    "zh": "MPEG-TS 188 字节传输流包头"
+  },
+  "status": "standard",
+  "type": "binary",
+  "layer": "application",
+  "depends_on": []
+}

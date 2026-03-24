@@ -1,0 +1,14 @@
+protocol Bluetooth_HCI version "1.0" {
+    byte_order little-endian;
+
+    field packet_indicator: uint8 enum {
+        1 = "Command",
+        2 = "ACL Data",
+        3 = "SCO Data",
+        4 = "Event"
+    };
+
+    field opcode: uint16;
+    field parameter_length: uint8;
+    field parameters: bytes;
+}

@@ -1,0 +1,11 @@
+{
+  "rfc": "",
+  "url": "https://redis.io/docs/reference/protocol-spec/",
+  "title": { "en": "Redis RESP Protocol", "zh": "Redis RESP 协议" },
+  "description": { "en": "Redis Serialization Protocol", "zh": "Redis 序列化协议" },
+  "status": "standard", "type": "binary", "layer": "application", "depends_on": ["TCP"],
+  "fields": {
+    "type_byte": { "en": "Data type indicator", "zh": "数据类型标识" },
+    "data": { "en": "Payload data", "zh": "载荷数据" }
+  }
+}

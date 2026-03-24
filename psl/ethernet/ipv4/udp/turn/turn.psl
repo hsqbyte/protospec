@@ -1,0 +1,7 @@
+protocol TURN version "1.0" {
+    byte_order big-endian;
+
+    field channel_number: uint16;
+    field message_length: uint16;
+    field payload: bytes;
+}

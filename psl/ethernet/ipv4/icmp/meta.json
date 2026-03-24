@@ -1,0 +1,35 @@
+{
+  "rfc": "792",
+  "url": "https://datatracker.ietf.org/doc/html/rfc792",
+  "title": {
+    "en": "Internet Control Message Protocol",
+    "zh": "互联网控制消息协议"
+  },
+  "description": {
+    "en": "Network diagnostic and error reporting protocol. Used by ping (echo request/reply) and traceroute (time exceeded). Reports unreachable hosts, network errors and routing problems.",
+    "zh": "网络诊断和错误报告协议。ping（回显请求/应答）和traceroute（超时）都基于ICMP。用于报告主机不可达、网络错误和路由问题。"
+  },
+  "status": "standard",
+  "see_also": [],
+  "type": "binary",
+  "layer": "network",
+  "depends_on": ["IPv4"],
+  "fields": {
+    "type": {
+      "en": "Message type (0=echo reply, 3=unreachable, 8=echo request, 11=time exceeded)",
+      "zh": "消息类型 (0=回显应答, 3=不可达, 8=回显请求, 11=超时)"
+    },
+    "code": {
+      "en": "Subtype code, meaning depends on type field",
+      "zh": "子类型代码，含义取决于type字段"
+    },
+    "checksum": {
+      "en": "Checksum of entire ICMP message",
+      "zh": "整个ICMP消息的校验和"
+    },
+    "payload": {
+      "en": "Type-specific data (e.g. echo ID+seq, or original packet header)",
+      "zh": "类型相关数据 (如回显的ID+序列号，或原始包头)"
+    }
+  }
+}

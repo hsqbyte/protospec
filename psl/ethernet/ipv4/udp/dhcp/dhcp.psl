@@ -1,0 +1,24 @@
+protocol DHCP version "1.0" {
+  byte_order big-endian;
+
+  field op: uint8
+    enum { 1 = "BOOTREQUEST", 2 = "BOOTREPLY" };
+  field htype: uint8;
+  field hlen: uint8;
+  field hops: uint8;
+  field xid: uint32;
+  field secs: uint16;
+  field flags: uint16;
+  field ciaddr: uint32
+    display ipv4;
+  field yiaddr: uint32
+    display ipv4;
+  field siaddr: uint32
+    display ipv4;
+  field giaddr: uint32
+    display ipv4;
+  field chaddr: bytes[16];
+  field sname: bytes[64];
+  field file: bytes[128];
+  field options: bytes;
+}

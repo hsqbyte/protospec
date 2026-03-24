@@ -1,0 +1,15 @@
+protocol HTTP2 version "1.0" {
+  byte_order big-endian;
+
+  bitfield {
+    field length: uint24;
+  }
+  field type: uint8
+    enum { 0 = "DATA", 1 = "HEADERS", 2 = "PRIORITY", 3 = "RST_STREAM", 4 = "SETTINGS", 5 = "PUSH_PROMISE", 6 = "PING", 7 = "GOAWAY", 8 = "WINDOW_UPDATE", 9 = "CONTINUATION" };
+  field flags: uint8;
+  bitfield {
+    field reserved: uint1;
+    field streamId: uint31;
+  }
+  field payload: bytes;
+}

@@ -1,0 +1,16 @@
+protocol IPv6 version "1.0" {
+  byte_order big-endian;
+
+  bitfield {
+    field version: uint4;
+    field trafficClass: uint8;
+    field flowLabel: uint20;
+  }
+  field payloadLength: uint16;
+  field nextHeader: uint8
+    enum { 6 = "TCP", 17 = "UDP", 58 = "ICMPv6", 0 = "Hop-by-Hop", 43 = "Routing", 44 = "Fragment" };
+  field hopLimit: uint8;
+  field srcAddr: bytes[16];
+  field dstAddr: bytes[16];
+  field payload: bytes;
+}

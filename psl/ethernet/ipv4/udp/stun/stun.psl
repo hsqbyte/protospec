@@ -1,0 +1,12 @@
+protocol STUN version "1.0" {
+    byte_order big-endian;
+
+    bitfield {
+        field zeros: uint2;
+        field message_type: uint14;
+    }
+    field message_length: uint16;
+    field magic_cookie: uint32;
+    field transaction_id: bytes[12];
+    field payload: bytes;
+}

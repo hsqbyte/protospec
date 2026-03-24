@@ -1,0 +1,24 @@
+message SIP version "2.0" {
+    transport rest;
+
+    request INVITE {
+        field method: string;
+        field request_uri: string;
+        field via: string;
+        field from: string;
+        field to: string;
+        field call_id: string;
+        field cseq: string;
+        field content_type: string;
+        field body: string optional;
+    }
+
+    response SIPResponse {
+        field status_code: number;
+        field reason: string;
+        field via: string;
+        field from: string;
+        field to: string;
+        field call_id: string;
+    }
+}

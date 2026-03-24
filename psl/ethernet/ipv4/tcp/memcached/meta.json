@@ -1,0 +1,14 @@
+{
+  "title": {
+    "en": "Memcached Binary Protocol",
+    "zh": "Memcached 二进制协议"
+  },
+  "description": {
+    "en": "Memcached binary protocol for high-performance caching",
+    "zh": "Memcached 二进制协议，用于高性能缓存"
+  },
+  "status": "standard",
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["TCP"]
+}

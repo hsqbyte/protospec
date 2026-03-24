@@ -1,0 +1,10 @@
+protocol TLS version "1.0" {
+  byte_order big-endian;
+
+  field contentType: uint8
+    enum { 20 = "ChangeCipherSpec", 21 = "Alert", 22 = "Handshake", 23 = "ApplicationData" };
+  field majorVersion: uint8;
+  field minorVersion: uint8;
+  field length: uint16;
+  field payload: bytes length_ref length;
+}

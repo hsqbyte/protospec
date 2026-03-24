@@ -1,0 +1,22 @@
+protocol Zigbee version "3.0" {
+    byte_order little-endian;
+
+    bitfield {
+        field frame_type: uint2;
+        field security: uint1;
+        field frame_pending: uint1;
+        field ack_request: uint1;
+        field pan_id_compress: uint1;
+        field reserved: uint2;
+    }
+    bitfield {
+        field seq_suppress: uint1;
+        field ie_present: uint1;
+        field dst_addr_mode: uint2;
+        field frame_version: uint2;
+        field src_addr_mode: uint2;
+    }
+
+    field sequence_number: uint8;
+    field payload: bytes;
+}

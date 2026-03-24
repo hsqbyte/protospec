@@ -1,0 +1,9 @@
+{
+  "rfc": "RFC 8489",
+  "title": { "en": "STUN Protocol", "zh": "STUN 协议" },
+  "description": { "en": "Session Traversal Utilities for NAT", "zh": "NAT 会话穿越工具" },
+  "status": "standard",
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["UDP"]
+}

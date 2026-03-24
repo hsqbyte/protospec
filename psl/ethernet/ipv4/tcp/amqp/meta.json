@@ -1,0 +1,14 @@
+{
+  "title": {
+    "en": "Advanced Message Queuing Protocol",
+    "zh": "高级消息队列协议"
+  },
+  "description": {
+    "en": "AMQP 0-9-1 frame format for message-oriented middleware",
+    "zh": "AMQP 0-9-1 帧格式，用于面向消息的中间件"
+  },
+  "status": "standard",
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["TCP"]
+}

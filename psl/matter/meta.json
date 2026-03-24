@@ -1,0 +1,8 @@
+{
+  "title": { "en": "Matter Protocol", "zh": "Matter 协议" },
+  "description": { "en": "Matter (CHIP) smart home protocol message header", "zh": "Matter (CHIP) 智能家居协议消息头" },
+  "status": "standard",
+  "type": "binary",
+  "layer": "application",
+  "depends_on": []
+}

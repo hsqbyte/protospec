@@ -1,0 +1,9 @@
+protocol ICMP version "1.0" {
+  byte_order big-endian;
+
+  field type: uint8;
+  field code: uint8;
+  field checksum: uint16
+    checksum internet-checksum covers [type, code, checksum, payload];
+  field payload: bytes;
+}

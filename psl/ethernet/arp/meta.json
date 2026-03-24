@@ -1,0 +1,55 @@
+{
+  "rfc": "826",
+  "url": "https://datatracker.ietf.org/doc/html/rfc826",
+  "title": {
+    "en": "Address Resolution Protocol",
+    "zh": "地址解析协议"
+  },
+  "description": {
+    "en": "Maps network layer addresses (IP) to link layer addresses (MAC) within a local network. Essential for Ethernet communication between hosts on the same subnet.",
+    "zh": "将网络层地址（IP）映射为链路层地址（MAC）。局域网内同一子网主机间以太网通信的基础。"
+  },
+  "status": "standard",
+  "see_also": [],
+  "type": "binary",
+  "layer": "link",
+  "depends_on": ["Ethernet"],
+  "fields": {
+    "hardwareType": {
+      "en": "Hardware type (1=Ethernet)",
+      "zh": "硬件类型 (1=以太网)"
+    },
+    "protocolType": {
+      "en": "Protocol type (0x0800=IPv4)",
+      "zh": "协议类型 (0x0800=IPv4)"
+    },
+    "hardwareSize": {
+      "en": "Hardware address length in bytes (6 for Ethernet MAC)",
+      "zh": "硬件地址长度（字节），以太网MAC为6"
+    },
+    "protocolSize": {
+      "en": "Protocol address length in bytes (4 for IPv4)",
+      "zh": "协议地址长度（字节），IPv4为4"
+    },
+    "opcode": {
+      "en": "Operation (1=request who-has, 2=reply is-at)",
+      "zh": "操作码 (1=请求 who-has, 2=应答 is-at)"
+    },
+    "senderMAC": {
+      "en": "Sender hardware address (MAC)",
+      "zh": "发送方硬件地址 (MAC)"
+    },
+    "senderIP": {
+      "en": "Sender protocol address (IP)",
+      "zh": "发送方协议地址 (IP)"
+    },
+    "targetMAC": {
+      "en": "Target hardware address, zero in requests",
+      "zh": "目标硬件地址，请求时为0"
+    },
+    "targetIP": {
+      "en": "Target protocol address (IP being resolved)",
+      "zh": "目标协议地址 (待解析的IP)"
+    }
+  }
+}

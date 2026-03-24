@@ -1,0 +1,14 @@
+{
+  "rfc": "RFC 3550",
+  "url": "https://datatracker.ietf.org/doc/html/rfc3550",
+  "title": { "en": "Real-time Transport Protocol", "zh": "实时传输协议" },
+  "description": { "en": "Protocol for real-time audio/video delivery", "zh": "实时音视频传输协议" },
+  "status": "standard", "type": "binary", "layer": "application", "depends_on": ["UDP"],
+  "fields": {
+    "version": { "en": "RTP version (2)", "zh": "RTP 版本（2）" },
+    "payload_type": { "en": "Payload type", "zh": "载荷类型" },
+    "sequence_number": { "en": "Sequence number", "zh": "序列号" },
+    "timestamp": { "en": "Sampling timestamp", "zh": "采样时间戳" },
+    "ssrc": { "en": "Synchronization source", "zh": "同步源标识符" }
+  }
+}

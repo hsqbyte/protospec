@@ -1,0 +1,14 @@
+{
+  "title": {
+    "en": "NATS Protocol",
+    "zh": "NATS 协议"
+  },
+  "description": {
+    "en": "NATS messaging protocol for cloud-native applications",
+    "zh": "NATS 消息协议，用于云原生应用"
+  },
+  "status": "standard",
+  "type": "message",
+  "layer": "application",
+  "depends_on": ["TCP"]
+}

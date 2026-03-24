@@ -1,0 +1,35 @@
+{
+  "rfc": "894",
+  "url": "https://datatracker.ietf.org/doc/html/rfc894",
+  "title": {
+    "en": "Ethernet II Frame",
+    "zh": "以太网II帧"
+  },
+  "description": {
+    "en": "The most common link layer framing used in local area networks. Carries upper layer protocols identified by a 16-bit EtherType field.",
+    "zh": "局域网中最常用的链路层帧格式。通过16位EtherType字段标识上层协议。"
+  },
+  "status": "standard",
+  "see_also": ["IEEE 802.3"],
+  "type": "binary",
+  "layer": "link",
+  "depends_on": [],
+  "fields": {
+    "dstMAC": {
+      "en": "Destination MAC address (48-bit)",
+      "zh": "目标MAC地址 (48位)"
+    },
+    "srcMAC": {
+      "en": "Source MAC address (48-bit)",
+      "zh": "源MAC地址 (48位)"
+    },
+    "etherType": {
+      "en": "Protocol type (0x0800=IPv4, 0x0806=ARP, 0x86DD=IPv6)",
+      "zh": "协议类型 (0x0800=IPv4, 0x0806=ARP, 0x86DD=IPv6)"
+    },
+    "payload": {
+      "en": "Upper layer protocol data (46-1500 bytes)",
+      "zh": "上层协议数据 (46-1500字节)"
+    }
+  }
+}

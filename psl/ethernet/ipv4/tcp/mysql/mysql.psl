@@ -1,0 +1,7 @@
+protocol MySQL version "1.0" {
+    byte_order little-endian;
+
+    field payload_length: uint24;
+    field sequence_id: uint8;
+    field payload: bytes;
+}

@@ -1,0 +1,63 @@
+{
+  "rfc": "6455",
+  "url": "https://datatracker.ietf.org/doc/html/rfc6455",
+  "title": {
+    "en": "The WebSocket Protocol",
+    "zh": "WebSocket协议"
+  },
+  "description": {
+    "en": "Full-duplex communication over a single TCP connection. Enables real-time data push from server to client, used by chat apps, live dashboards and collaborative tools.",
+    "zh": "基于单个TCP连接的全双工通信协议。支持服务器向客户端实时推送数据，用于聊天应用、实时仪表盘和协作工具。"
+  },
+  "status": "standard",
+  "see_also": [],
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["TCP"],
+  "fields": {
+    "fin": {
+      "en": "Final fragment flag (1=last frame of message)",
+      "zh": "最终分片标志 (1=消息的最后一帧)"
+    },
+    "rsv1": {
+      "en": "Reserved bit 1, must be 0 unless extension negotiated",
+      "zh": "保留位1，未协商扩展时必须为0"
+    },
+    "rsv2": {
+      "en": "Reserved bit 2, must be 0 unless extension negotiated",
+      "zh": "保留位2，未协商扩展时必须为0"
+    },
+    "rsv3": {
+      "en": "Reserved bit 3, must be 0 unless extension negotiated",
+      "zh": "保留位3，未协商扩展时必须为0"
+    },
+    "opcode": {
+      "en": "Frame type (0=continuation, 1=text, 2=binary, 8=close, 9=ping, 10=pong)",
+      "zh": "帧类型 (0=延续帧, 1=文本, 2=二进制, 8=关闭, 9=ping, 10=pong)"
+    },
+    "mask": {
+      "en": "Mask flag (1=payload is masked, required for client-to-server)",
+      "zh": "掩码标志 (1=载荷已掩码，客户端到服务器必须为1)"
+    },
+    "payloadLen": {
+      "en": "Payload length (0-125 direct, 126=next 2 bytes, 127=next 8 bytes)",
+      "zh": "载荷长度 (0-125直接表示, 126=后续2字节, 127=后续8字节)"
+    },
+    "extPayloadLen16": {
+      "en": "Extended payload length (16-bit), present when payloadLen=126",
+      "zh": "扩展载荷长度 (16位)，payloadLen=126时存在"
+    },
+    "extPayloadLen64": {
+      "en": "Extended payload length (64-bit), present when payloadLen=127",
+      "zh": "扩展载荷长度 (64位)，payloadLen=127时存在"
+    },
+    "maskingKey": {
+      "en": "32-bit masking key for payload XOR, present when mask=1",
+      "zh": "32位掩码密钥，用于载荷XOR运算，mask=1时存在"
+    },
+    "payload": {
+      "en": "Frame payload data (masked if mask=1)",
+      "zh": "帧载荷数据 (mask=1时已掩码)"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "rfc": "RFC 3261",
+  "url": "https://datatracker.ietf.org/doc/html/rfc3261",
+  "title": { "en": "Session Initiation Protocol", "zh": "会话发起协议" },
+  "description": { "en": "Signaling protocol for VoIP and multimedia sessions", "zh": "VoIP 和多媒体会话信令协议" },
+  "status": "standard", "type": "message", "layer": "application", "depends_on": ["TCP", "UDP"],
+  "fields": {}
+}

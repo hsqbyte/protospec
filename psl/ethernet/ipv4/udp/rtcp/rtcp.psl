@@ -1,0 +1,17 @@
+protocol RTCP version "1.0" {
+    byte_order big-endian;
+
+    bitfield {
+        field version: uint2;
+        field padding: uint1;
+        field rc: uint5;
+    }
+
+    field packet_type: uint8 enum {
+        200 = "SR", 201 = "RR", 202 = "SDES",
+        203 = "BYE", 204 = "APP"
+    };
+    field length: uint16;
+    field ssrc: uint32;
+    field payload: bytes;
+}

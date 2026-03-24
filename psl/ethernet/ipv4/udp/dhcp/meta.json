@@ -1,0 +1,79 @@
+{
+  "rfc": "2131",
+  "url": "https://datatracker.ietf.org/doc/html/rfc2131",
+  "title": {
+    "en": "Dynamic Host Configuration Protocol",
+    "zh": "动态主机配置协议"
+  },
+  "description": {
+    "en": "Automatically assigns IP addresses and network configuration to hosts. Uses a four-step DORA process (Discover, Offer, Request, Acknowledge) over UDP ports 67/68.",
+    "zh": "自动为主机分配IP地址和网络配置。通过UDP 67/68端口使用四步DORA流程（发现、提供、请求、确认）。"
+  },
+  "status": "standard",
+  "see_also": ["RFC 2132"],
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["UDP"],
+  "fields": {
+    "op": {
+      "en": "Message type (1=BOOTREQUEST from client, 2=BOOTREPLY from server)",
+      "zh": "消息类型 (1=客户端请求, 2=服务器应答)"
+    },
+    "htype": {
+      "en": "Hardware address type (1=Ethernet)",
+      "zh": "硬件地址类型 (1=以太网)"
+    },
+    "hlen": {
+      "en": "Hardware address length (6 for Ethernet MAC)",
+      "zh": "硬件地址长度 (以太网MAC为6)"
+    },
+    "hops": {
+      "en": "Relay agent hop count",
+      "zh": "中继代理跳数"
+    },
+    "xid": {
+      "en": "Transaction ID chosen by client",
+      "zh": "客户端选择的事务ID"
+    },
+    "secs": {
+      "en": "Seconds elapsed since client began address acquisition",
+      "zh": "客户端开始获取地址后经过的秒数"
+    },
+    "flags": {
+      "en": "Flags (bit 0 = broadcast flag)",
+      "zh": "标志位 (bit 0 = 广播标志)"
+    },
+    "ciaddr": {
+      "en": "Client IP address (filled if client has valid IP)",
+      "zh": "客户端IP地址 (客户端已有有效IP时填写)"
+    },
+    "yiaddr": {
+      "en": "Your (client) IP address assigned by server",
+      "zh": "服务器分配给客户端的IP地址"
+    },
+    "siaddr": {
+      "en": "Next server IP address for bootstrap",
+      "zh": "引导用的下一个服务器IP地址"
+    },
+    "giaddr": {
+      "en": "Relay agent IP address",
+      "zh": "中继代理IP地址"
+    },
+    "chaddr": {
+      "en": "Client hardware address (16 bytes, padded)",
+      "zh": "客户端硬件地址 (16字节，填充)"
+    },
+    "sname": {
+      "en": "Server host name (64 bytes, null-terminated)",
+      "zh": "服务器主机名 (64字节，空字符结尾)"
+    },
+    "file": {
+      "en": "Boot file name (128 bytes, null-terminated)",
+      "zh": "引导文件名 (128字节，空字符结尾)"
+    },
+    "options": {
+      "en": "DHCP options (variable length, starts with magic cookie 0x63825363)",
+      "zh": "DHCP选项 (变长，以魔术字 0x63825363 开头)"
+    }
+  }
+}

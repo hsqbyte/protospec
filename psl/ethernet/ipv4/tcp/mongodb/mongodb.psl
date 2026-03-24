@@ -1,0 +1,13 @@
+protocol MongoDB version "1.0" {
+    byte_order little-endian;
+
+    field message_length: uint32;
+    field request_id: uint32;
+    field response_to: uint32;
+    field opcode: uint32 enum {
+        1 = "OP_REPLY", 2013 = "OP_MSG",
+        2004 = "OP_QUERY", 2002 = "OP_INSERT",
+        2006 = "OP_DELETE", 2001 = "OP_UPDATE"
+    };
+    field payload: bytes;
+}

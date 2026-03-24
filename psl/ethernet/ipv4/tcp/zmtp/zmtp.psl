@@ -1,0 +1,13 @@
+protocol ZMTP version "3.1" {
+    byte_order big-endian;
+
+    bitfield {
+        field flags_more: uint1;
+        field flags_long: uint1;
+        field flags_command: uint1;
+        field flags_reserved: uint5;
+    }
+
+    field size: uint8;
+    field payload: bytes;
+}

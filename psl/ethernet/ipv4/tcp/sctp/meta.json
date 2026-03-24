@@ -1,0 +1,16 @@
+{
+  "rfc": "RFC 9260",
+  "url": "https://datatracker.ietf.org/doc/html/rfc9260",
+  "title": { "en": "Stream Control Transmission Protocol", "zh": "流控制传输协议" },
+  "description": { "en": "Reliable message-oriented transport protocol", "zh": "可靠的面向消息的传输协议" },
+  "status": "standard",
+  "type": "binary",
+  "layer": "transport",
+  "depends_on": ["IPv4"],
+  "fields": {
+    "source_port": { "en": "Source port", "zh": "源端口" },
+    "dest_port": { "en": "Destination port", "zh": "目标端口" },
+    "verification_tag": { "en": "Verification tag", "zh": "验证标签" },
+    "checksum": { "en": "CRC-32c checksum", "zh": "CRC-32c 校验和" }
+  }
+}

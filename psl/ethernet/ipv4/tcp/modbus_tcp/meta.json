@@ -1,0 +1,24 @@
+{
+  "rfc": "",
+  "url": "https://modbus.org/specs/Modbus_Application_Protocol_V1_1b3.pdf",
+  "title": {
+    "en": "Modbus TCP Protocol",
+    "zh": "Modbus TCP 协议"
+  },
+  "description": {
+    "en": "Industrial communication protocol for SCADA and PLC systems over TCP/IP",
+    "zh": "基于 TCP/IP 的工业通信协议，用于 SCADA 和 PLC 系统"
+  },
+  "status": "standard",
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["TCP"],
+  "fields": {
+    "transaction_id": { "en": "Transaction identifier", "zh": "事务标识符" },
+    "protocol_id": { "en": "Protocol identifier (0 for Modbus)", "zh": "协议标识符（Modbus 为 0）" },
+    "length": { "en": "Number of following bytes", "zh": "后续字节数" },
+    "unit_id": { "en": "Unit identifier (slave address)", "zh": "单元标识符（从站地址）" },
+    "function_code": { "en": "Function code", "zh": "功能码" },
+    "data": { "en": "Request/response data", "zh": "请求/响应数据" }
+  }
+}

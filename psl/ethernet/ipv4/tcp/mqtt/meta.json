@@ -1,0 +1,35 @@
+{
+  "rfc": "",
+  "url": "https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html",
+  "title": {
+    "en": "Message Queuing Telemetry Transport",
+    "zh": "消息队列遥测传输协议"
+  },
+  "description": {
+    "en": "Lightweight publish/subscribe messaging protocol designed for IoT and constrained devices. Supports QoS levels, retained messages and last will.",
+    "zh": "为物联网和受限设备设计的轻量级发布/订阅消息协议。支持QoS等级、保留消息和遗嘱消息。"
+  },
+  "status": "standard",
+  "see_also": ["MQTT 5.0"],
+  "type": "binary",
+  "layer": "application",
+  "depends_on": ["TCP"],
+  "fields": {
+    "packetType": {
+      "en": "Packet type (1=CONNECT, 2=CONNACK, 3=PUBLISH, etc.)",
+      "zh": "包类型 (1=CONNECT, 2=CONNACK, 3=PUBLISH等)"
+    },
+    "flags": {
+      "en": "Type-specific flags (DUP, QoS, RETAIN for PUBLISH)",
+      "zh": "类型相关标志 (PUBLISH的DUP, QoS, RETAIN)"
+    },
+    "remainingLength": {
+      "en": "Remaining length of variable header and payload",
+      "zh": "可变头部和载荷的剩余长度"
+    },
+    "payload": {
+      "en": "Variable header and payload data",
+      "zh": "可变头部和载荷数据"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "rfc": "",
+  "url": "https://www.jsonrpc.org/specification",
+  "title": {
+    "en": "JSON Remote Procedure Call Protocol",
+    "zh": "JSON 远程过程调用协议"
+  },
+  "description": {
+    "en": "A stateless, lightweight remote procedure call protocol using JSON encoding",
+    "zh": "一种使用 JSON 编码的无状态轻量级远程过程调用协议"
+  },
+  "status": "standard",
+  "see_also": [],
+  "type": "message",
+  "layer": "application",
+  "depends_on": ["HTTP"],
+  "fields": {
+    "jsonrpc": {
+      "en": "Protocol version, always \"2.0\"",
+      "zh": "协议版本，固定为 \"2.0\""
+    },
+    "method": {
+      "en": "Name of the method to be invoked",
+      "zh": "要调用的方法名"
+    },
+    "params": {
+      "en": "Parameter values for the method",
+      "zh": "方法的参数值"
+    },
+    "id": {
+      "en": "Request identifier for matching responses",
+      "zh": "用于匹配响应的请求标识符"
+    },
+    "result": {
+      "en": "Result of the method invocation",
+      "zh": "方法调用的结果"
+    },
+    "error": {
+      "en": "Error object if method invocation failed",
+      "zh": "方法调用失败时的错误对象"
+    },
+    "code": {
+      "en": "Integer error code",
+      "zh": "整数错误码"
+    },
+    "message": {
+      "en": "Short description of the error",
+      "zh": "错误的简短描述"
+    },
+    "data": {
+      "en": "Additional error data",
+      "zh": "附加错误数据"
+    }
+  }
+}

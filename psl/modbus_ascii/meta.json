@@ -1,0 +1,8 @@
+{
+  "title": { "en": "Modbus ASCII", "zh": "Modbus ASCII" },
+  "description": { "en": "Modbus ASCII serial protocol for industrial automation", "zh": "Modbus ASCII 串行协议，用于工业自动化" },
+  "status": "standard",
+  "type": "binary",
+  "layer": "application",
+  "depends_on": []
+}

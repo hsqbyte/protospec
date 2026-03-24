@@ -1,0 +1,20 @@
+protocol RTP version "2.0" {
+    byte_order big-endian;
+
+    bitfield {
+        field version: uint2;
+        field padding: uint1;
+        field extension: uint1;
+        field csrc_count: uint4;
+        field marker: uint1;
+        field payload_type: uint7 enum {
+            0 = "PCMU", 8 = "PCMA", 96 = "Dynamic",
+            111 = "Opus", 126 = "H264"
+        };
+    }
+
+    field sequence_number: uint16;
+    field timestamp: uint32;
+    field ssrc: uint32;
+    field payload: bytes;
+}
