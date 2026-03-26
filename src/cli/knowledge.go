@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/knowledge"
+	"github.com/hsqbyte/protospec/src/platform/knowledge"
 )
 
 func runKnowledge(ctx *Context, args []string) error {

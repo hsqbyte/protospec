@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/standards"
+	"github.com/hsqbyte/protospec/src/platform/standards"
 )
 
 func runStandards(ctx *Context, args []string) error {

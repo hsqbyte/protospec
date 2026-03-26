@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/events"
+	"github.com/hsqbyte/protospec/src/platform/events"
 )
 
 func runEvents(ctx *Context, args []string) error {

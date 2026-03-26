@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hsqbyte/protospec/src/schema"
+	"github.com/hsqbyte/protospec/src/core/schema"
 )
 
 // GenerateEmbeddedC generates embedded-friendly C code (no malloc, fixed buffers).

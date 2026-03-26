@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/pqcrypto"
+	"github.com/hsqbyte/protospec/src/integrations/pqcrypto"
 )
 
 func runPQCrypto(ctx *Context, args []string) error {

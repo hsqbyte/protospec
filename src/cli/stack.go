@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/hsqbyte/protospec/src/stack"
+	"github.com/hsqbyte/protospec/src/integrations/stack"
 )
 
 func runDecapsulate(ctx *Context, args []string) error {

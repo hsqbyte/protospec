@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hsqbyte/protospec/src/search"
+	"github.com/hsqbyte/protospec/src/tools/search"
 )
 
 func runSearch(ctx *Context, args []string) error {

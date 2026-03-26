@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/migrate"
+	"github.com/hsqbyte/protospec/src/platform/migrate"
 )
 
 func runMigrate(ctx *Context, args []string) error {

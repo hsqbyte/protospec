@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/hsqbyte/protospec/src/sequence"
+	"github.com/hsqbyte/protospec/src/tools/sequence"
 )
 
 func runSequence(ctx *Context, args []string) error {

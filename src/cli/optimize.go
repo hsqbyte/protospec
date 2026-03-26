@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/optimize"
+	"github.com/hsqbyte/protospec/src/tools/optimize"
 )
 
 func runOptimize(ctx *Context, args []string) error {

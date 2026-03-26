@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/repl"
+	"github.com/hsqbyte/protospec/src/tools/repl"
 )
 
 func runREPL(ctx *Context, args []string) error {

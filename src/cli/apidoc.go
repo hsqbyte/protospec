@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/hsqbyte/protospec/src/apidoc"
+	"github.com/hsqbyte/protospec/src/docs/apidoc"
 )
 
 func runAPIDoc(ctx *Context, args []string) error {

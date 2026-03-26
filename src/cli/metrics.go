@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/metrics"
+	"github.com/hsqbyte/protospec/src/platform/metrics"
 )
 
 func runMetrics(ctx *Context, args []string) error {

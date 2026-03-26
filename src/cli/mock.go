@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/hsqbyte/protospec/src/simulate"
+	"github.com/hsqbyte/protospec/src/integrations/simulate"
 )
 
 func runMock(ctx *Context, args []string) error {

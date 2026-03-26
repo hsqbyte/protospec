@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/ecosystem"
+	"github.com/hsqbyte/protospec/src/platform/ecosystem"
 )
 
 func runEcosystem(ctx *Context, args []string) error {

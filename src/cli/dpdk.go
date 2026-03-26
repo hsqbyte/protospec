@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/dpdk"
+	"github.com/hsqbyte/protospec/src/integrations/dpdk"
 )
 
 func runDPDK(ctx *Context, args []string) error {

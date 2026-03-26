@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/desktop"
+	"github.com/hsqbyte/protospec/src/platform/desktop"
 )
 
 func runDesktop(ctx *Context, args []string) error {

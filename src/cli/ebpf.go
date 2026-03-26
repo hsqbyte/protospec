@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/ebpf"
+	"github.com/hsqbyte/protospec/src/integrations/ebpf"
 )
 
 func runEBPF(ctx *Context, args []string) error {

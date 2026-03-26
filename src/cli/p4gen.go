@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/p4gen"
+	"github.com/hsqbyte/protospec/src/integrations/p4gen"
 )
 
 func runP4Gen(ctx *Context, args []string) error {

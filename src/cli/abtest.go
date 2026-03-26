@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/abtest"
+	"github.com/hsqbyte/protospec/src/platform/abtest"
 )
 
 func runABTest(ctx *Context, args []string) error {

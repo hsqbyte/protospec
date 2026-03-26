@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/hsqbyte/protospec/src/identify"
+	"github.com/hsqbyte/protospec/src/integrations/identify"
 )
 
 func runIdentify(ctx *Context, args []string) error {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hsqbyte/protospec/src/schema"
+	"github.com/hsqbyte/protospec/src/core/schema"
 )
 
 // GenerateRust generates Rust struct code for the given protocol.

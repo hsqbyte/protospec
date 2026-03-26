@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/coverage"
+	"github.com/hsqbyte/protospec/src/tools/coverage"
 )
 
 func runCoverage(ctx *Context, args []string) error {

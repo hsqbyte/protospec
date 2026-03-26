@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/hsqbyte/protospec/src/convert"
+	"github.com/hsqbyte/protospec/src/platform/convert"
 )
 
 func runConvert(ctx *Context, args []string) error {

@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/plugin"
+	"github.com/hsqbyte/protospec/src/platform/plugin"
 )
 
 func runInstall(ctx *Context, args []string) error {

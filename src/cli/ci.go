@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/ci"
+	"github.com/hsqbyte/protospec/src/platform/ci"
 )
 
 func runCI(ctx *Context, args []string) error {

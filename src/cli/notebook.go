@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/notebook"
+	"github.com/hsqbyte/protospec/src/platform/notebook"
 )
 
 func runNotebook(ctx *Context, args []string) error {

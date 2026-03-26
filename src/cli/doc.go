@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/hsqbyte/protospec/src/protocol"
-	"github.com/hsqbyte/protospec/src/schema"
+	"github.com/hsqbyte/protospec/src/core/schema"
 )
 
 func runDoc(ctx *Context, args []string) error {

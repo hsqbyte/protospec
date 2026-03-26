@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/tenant"
+	"github.com/hsqbyte/protospec/src/platform/tenant"
 )
 
 func runTenant(ctx *Context, args []string) error {

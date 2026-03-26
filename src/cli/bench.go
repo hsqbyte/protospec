@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/hsqbyte/protospec/src/schema"
+	"github.com/hsqbyte/protospec/src/core/schema"
 )
 
 func runBench(ctx *Context, args []string) error {

@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/etl"
+	"github.com/hsqbyte/protospec/src/platform/etl"
 )
 
 func runETL(ctx *Context, args []string) error {

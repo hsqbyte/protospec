@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/hsqbyte/protospec/src/diffpcap"
+	"github.com/hsqbyte/protospec/src/tools/diffpcap"
 )
 
 func runDiffPcap(ctx *Context, args []string) error {

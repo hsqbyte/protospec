@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/pkg"
+	"github.com/hsqbyte/protospec/src/platform/pkg"
 )
 
 func runPkg(ctx *Context, args []string) error {

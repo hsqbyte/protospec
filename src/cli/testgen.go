@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/hsqbyte/protospec/src/testgen"
+	"github.com/hsqbyte/protospec/src/tools/testgen"
 )
 
 func runTestGen(ctx *Context, args []string) error {

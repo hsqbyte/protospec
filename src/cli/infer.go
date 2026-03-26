@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/infer"
+	"github.com/hsqbyte/protospec/src/integrations/infer"
 )
 
 func runInfer(ctx *Context, args []string) error {

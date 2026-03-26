@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hsqbyte/protospec/src/schema"
+	"github.com/hsqbyte/protospec/src/core/schema"
 )
 
 // GenerateWireshark generates a Lua dissector script for Wireshark.

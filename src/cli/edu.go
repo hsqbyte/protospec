@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/edu"
+	"github.com/hsqbyte/protospec/src/platform/edu"
 )
 
 func runEdu(ctx *Context, args []string) error {

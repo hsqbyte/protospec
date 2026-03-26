@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/hsqbyte/protospec/src/project"
+	"github.com/hsqbyte/protospec/src/platform/project"
 )
 
 func runProjectInit(ctx *Context, args []string) error {

@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/autocomply"
+	"github.com/hsqbyte/protospec/src/integrations/autocomply"
 )
 
 func runAutoComply(ctx *Context, args []string) error {

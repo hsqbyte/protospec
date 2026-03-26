@@ -7,7 +7,7 @@ import (
 	"text/template"
 
 	"github.com/hsqbyte/protospec/src/protocol"
-	"github.com/hsqbyte/protospec/src/schema"
+	"github.com/hsqbyte/protospec/src/core/schema"
 )
 
 // TemplateData holds the data passed to custom templates.

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/hsqbyte/protospec/src/compliance"
+	"github.com/hsqbyte/protospec/src/integrations/compliance"
 )
 
 func runCompliance(ctx *Context, args []string) error {

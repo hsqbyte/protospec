@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/contract"
+	"github.com/hsqbyte/protospec/src/platform/contract"
 )
 
 func runContract(ctx *Context, args []string) error {

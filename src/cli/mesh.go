@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/mesh"
+	"github.com/hsqbyte/protospec/src/integrations/mesh"
 )
 
 func runMesh(ctx *Context, args []string) error {

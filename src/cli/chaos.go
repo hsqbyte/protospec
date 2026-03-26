@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/chaos"
+	"github.com/hsqbyte/protospec/src/integrations/chaos"
 )
 
 func runChaos(ctx *Context, args []string) error {

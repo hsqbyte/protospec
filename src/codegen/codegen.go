@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/hsqbyte/protospec/src/protocol"
-	"github.com/hsqbyte/protospec/src/schema"
+	"github.com/hsqbyte/protospec/src/core/schema"
 )
 
 // Generator generates Go source code from a protocol schema.

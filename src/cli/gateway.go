@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/gateway"
+	"github.com/hsqbyte/protospec/src/integrations/gateway"
 )
 
 func runGateway(ctx *Context, args []string) error {

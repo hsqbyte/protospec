@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/hsqbyte/protospec/src/formatter"
+	"github.com/hsqbyte/protospec/src/tools/formatter"
 )
 
 func runFmt(ctx *Context, args []string) error {

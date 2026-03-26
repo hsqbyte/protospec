@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/hsqbyte/protospec/src/forensics"
+	"github.com/hsqbyte/protospec/src/integrations/forensics"
 )
 
 func runForensics(ctx *Context, args []string) error {

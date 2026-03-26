@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/hsqbyte/protospec/src/pipe"
+	"github.com/hsqbyte/protospec/src/tools/pipe"
 )
 
 func runPipe(ctx *Context, args []string) error {

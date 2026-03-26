@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/datalake"
+	"github.com/hsqbyte/protospec/src/platform/datalake"
 )
 
 func runDatalake(ctx *Context, args []string) error {

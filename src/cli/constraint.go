@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/constraint"
+	"github.com/hsqbyte/protospec/src/core/constraint"
 )
 
 func runConstraint(ctx *Context, args []string) error {

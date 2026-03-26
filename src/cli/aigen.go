@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/aigen"
+	"github.com/hsqbyte/protospec/src/platform/aigen"
 )
 
 func runAIGen(ctx *Context, args []string) error {

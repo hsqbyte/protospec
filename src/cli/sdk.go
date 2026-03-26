@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/hsqbyte/protospec/src/sdk"
+	"github.com/hsqbyte/protospec/src/platform/sdk"
 )
 
 func runSDK(ctx *Context, args []string) error {

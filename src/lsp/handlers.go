@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/hsqbyte/protospec/psl"
-	"github.com/hsqbyte/protospec/src/pdl"
+	"github.com/hsqbyte/protospec/src/core/pdl"
 )
 
 type textDocumentItem struct {

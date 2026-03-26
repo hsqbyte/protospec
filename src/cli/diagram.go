@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/hsqbyte/protospec/src/schema"
+	"github.com/hsqbyte/protospec/src/core/schema"
 )
 
 func runDiagram(ctx *Context, args []string) error {

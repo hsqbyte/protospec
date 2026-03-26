@@ -6,9 +6,9 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/hsqbyte/protospec/src/pdl"
+	"github.com/hsqbyte/protospec/src/core/pdl"
 	"github.com/hsqbyte/protospec/src/protocol"
-	"github.com/hsqbyte/protospec/src/schema"
+	"github.com/hsqbyte/protospec/src/core/schema"
 
 	"golang.org/x/term"
 )

@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/playground"
+	"github.com/hsqbyte/protospec/src/platform/playground"
 )
 
 func runPlayground(ctx *Context, args []string) error {

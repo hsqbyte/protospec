@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/docsite"
+	"github.com/hsqbyte/protospec/src/docs/docsite"
 )
 
 func runDocsite(ctx *Context, args []string) error {

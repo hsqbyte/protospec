@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/hsqbyte/protospec/psl"
-	"github.com/hsqbyte/protospec/src/lint"
+	"github.com/hsqbyte/protospec/src/tools/lint"
 )
 
 func runLint(ctx *Context, args []string) error {

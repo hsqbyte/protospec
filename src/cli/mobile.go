@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/mobile"
+	"github.com/hsqbyte/protospec/src/platform/mobile"
 )
 
 func runMobile(ctx *Context, args []string) error {

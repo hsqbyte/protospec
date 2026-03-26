@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/benchsuite"
+	"github.com/hsqbyte/protospec/src/tools/benchsuite"
 )
 
 func runBenchSuite(ctx *Context, args []string) error {

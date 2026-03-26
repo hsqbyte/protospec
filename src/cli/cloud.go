@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/cloud"
+	"github.com/hsqbyte/protospec/src/platform/cloud"
 )
 
 func runCloud(ctx *Context, args []string) error {

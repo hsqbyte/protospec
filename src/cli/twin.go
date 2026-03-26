@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/twin"
+	"github.com/hsqbyte/protospec/src/platform/twin"
 )
 
 func runTwin(ctx *Context, args []string) error {

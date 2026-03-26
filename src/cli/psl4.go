@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/psl4"
+	"github.com/hsqbyte/protospec/src/docs/psl4"
 )
 
 func runPSL4(ctx *Context, args []string) error {

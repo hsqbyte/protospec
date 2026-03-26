@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/hsqbyte/protospec/src/vdiff"
+	"github.com/hsqbyte/protospec/src/tools/vdiff"
 )
 
 func runVisualDiff(ctx *Context, args []string) error {
