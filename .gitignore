@@ -2,3 +2,6 @@
 .kiro/
 .DS_Store
 docs/
+dist/
+*.wasm
+npm/wasm_exec.js

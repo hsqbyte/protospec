@@ -1,0 +1,49 @@
+version: '3'
+
+vars:
+  BINARY: psl
+  LDFLAGS: -s -w
+
+tasks:
+  build:
+    desc: Build the PSL binary
+    cmds:
+      - go build -ldflags "{{.LDFLAGS}}" -o {{.BINARY}} .
+
+  test:
+    desc: Run all tests
+    cmds:
+      - go test ./...
+
+  clean:
+    desc: Clean build artifacts
+    cmds:
+      - rm -f {{.BINARY}}
+      - rm -rf dist/
+      - rm -f npm/protospec.wasm
+
+  release:
+    desc: Build release binaries for all platforms
+    deps: [clean]
+    cmds:
+      - mkdir -p dist
+      - GOOS=linux   GOARCH=amd64 go build -ldflags "{{.LDFLAGS}}" -o dist/{{.BINARY}}-linux-amd64 .
+      - GOOS=linux   GOARCH=arm64 go build -ldflags "{{.LDFLAGS}}" -o dist/{{.BINARY}}-linux-arm64 .
+      - GOOS=darwin  GOARCH=amd64 go build -ldflags "{{.LDFLAGS}}" -o dist/{{.BINARY}}-darwin-amd64 .
+      - GOOS=darwin  GOARCH=arm64 go build -ldflags "{{.LDFLAGS}}" -o dist/{{.BINARY}}-darwin-arm64 .
+      - GOOS=windows GOARCH=amd64 go build -ldflags "{{.LDFLAGS}}" -o dist/{{.BINARY}}-windows-amd64.exe .
+      - echo "Release binaries built in dist/"
+
+  wasm:
+    desc: Compile protospec to WebAssembly
+    cmds:
+      - GOOS=js GOARCH=wasm go build -o npm/protospec.wasm ./cmd/wasm/
+      - cp "$(go env GOROOT)/lib/wasm/wasm_exec.js" npm/wasm_exec.js
+      - echo "WASM built → npm/protospec.wasm"
+
+  npm:publish:
+    desc: Build WASM and publish npm package
+    deps: [wasm]
+    dir: npm
+    cmds:
+      - npm publish

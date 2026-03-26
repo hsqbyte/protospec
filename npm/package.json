@@ -1,0 +1,20 @@
+{
+  "name": "protospec-wasm",
+  "version": "1.0.0",
+  "description": "PSL (Protocol Specification Language) engine compiled to WebAssembly",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "protospec.wasm",
+    "wasm_exec.js"
+  ],
+  "keywords": ["protocol", "binary", "codec", "wasm", "psl"],
+  "author": "hsqbyte",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hsqbyte/protospec.git"
+  }
+}
